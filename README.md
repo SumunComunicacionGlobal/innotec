@@ -3,7 +3,7 @@
 innotec
 ===
 
-Hola. Esto es el tema `innotec`, para Grupo Innotec S.L., está basado en el starter them Underscores.
+Hola. Esto es el tema `innotec`, para Grupo Innotec S.L., está basado en el starter theme Underscores.
 
 Instalación
 ---------------
@@ -17,7 +17,7 @@ Instalación
 
 ### Cómo empezar
 
-Clona o descarga este repositorio `$ git clone https://github.com/alvarorubioc/veramountain-wp` en tu carpeta de themes.
+Clona o descarga este repositorio `$ git clone https://github.com/SumunComunicacionGlobal/innotec` en tu carpeta de themes.
 
 ### Setup
 
