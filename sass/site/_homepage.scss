@@ -1,0 +1,11 @@
+#section-main {
+    position: relative;
+    background-image: url(../img/bg-registro-colegiados.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 145px 300px;
+
+    @include breakpoint(tablet) {
+        background-size: calc( 145px/2 ) calc( 300px/2 );
+    }
+}

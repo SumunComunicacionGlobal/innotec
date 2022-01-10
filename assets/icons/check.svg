@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>check</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.074510 0 0 0 0 0.149020 0 0 0 0 0.270588 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6.-INDUSTRIA-(listado)" transform="translate(-278.000000, -2529.000000)">
+            <g id="COPIES" transform="translate(142.500000, 720.000000)">
+                <g id="3643781_check_checklist_complete_done_mark_icon" transform="translate(135.500000, 1809.000000)" filter="url(#filter-1)">
+                    <g>
+                        <path d="M15,30 C6.71572875,30 0,23.2842712 0,15 C0,6.71572875 6.71572875,0 15,0 C23.2842712,0 30,6.71572875 30,15 C30,23.2842712 23.2842712,30 15,30 Z M15,2 C7.82029825,2 2,7.82029825 2,15 C2,22.1797017 7.82029825,28 15,28 C22.1797017,28 28,22.1797017 28,15 C28,11.5521856 26.6303611,8.24558476 24.1923882,5.80761184 C21.7544152,3.36963892 18.4478144,2 15,2 Z" id="Shape" fill="#101820" fill-rule="nonzero"></path>
+                        <path d="M12.67,21 C12.3928349,20.9991084 12.1284718,20.8832232 11.94,20.68 L7.27,15.68 C6.93890975,15.2716916 6.98047541,14.6767462 7.36512474,14.3184427 C7.74977406,13.9601393 8.3461693,13.9608197 8.73,14.32 L12.67,18.53 L21.27,9.32 C21.5053431,9.02976926 21.8828613,8.89495758 22.2488102,8.97046705 C22.6147591,9.04597653 22.908082,9.31920881 23.009323,9.67888994 C23.110564,10.0385711 23.0028317,10.4246901 22.73,10.68 L13.4,20.68 C13.2115282,20.8832232 12.9471651,20.9991084 12.67,21 Z" id="Path" fill="#101820" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

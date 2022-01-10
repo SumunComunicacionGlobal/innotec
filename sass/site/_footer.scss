@@ -1,0 +1,55 @@
+.site-footer {
+    background-color: $color__primary-40;
+    padding: $space-xxl 0;
+    color: white;
+    font-size: 1.125rem;
+    
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+        a {
+            line-height: 1;
+            color: white;
+            padding: 0;
+            &:hover {
+                color: $color__secondary;
+            }
+        }
+    }   
+}
+
+.site-info {
+
+    .legal {
+        display: flex;
+        align-items: center;
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+    
+            li:before {
+                content: '|';
+                
+            }
+
+            li:first-child {
+                margin-left: $space-xxs;
+            }
+    
+            a {
+                line-height: 1;
+                padding: 0 $space-xxs;
+                color: $color__text-main;
+                &:hover {
+                    color: $color__secondary;
+                }
+                
+            }
+        } 
+    } 
+
+}

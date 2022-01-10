@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow simple Copy 9</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.894118 0 0 0 0 0.333333 0 0 0 0 0.062745 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6.-INDUSTRIA-(listado)" transform="translate(-141.000000, -1164.000000)">
+            <g id="LISTADO" transform="translate(0.000000, 1078.000000)">
+                <g id="Arrow-simple-Copy-9" transform="translate(142.000000, 87.500000)" filter="url(#filter-1)">
+                    <g>
+                        <polyline id="Path" stroke="#000000" stroke-width="2" points="0 0 8.5 8.5 0 17"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

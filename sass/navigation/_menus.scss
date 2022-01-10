@@ -1,0 +1,162 @@
+#top-bar {
+	background-color: $color__primary;
+	color: white;
+	.row {
+		height: 3rem;
+	}
+
+	ul#top-nav{
+		list-style: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+
+			a {
+				line-height: 1;
+				color: white;
+				padding: 0 2.5rem 0 1.2rem;
+				&:hover {
+					color: $color__secondary;
+				}
+			}
+
+			&:after {
+				content: '';
+				background-color: $color__secondary;
+				height: 9px;
+				width: 9px;
+				position: absolute;
+				left: 0;
+				top: 6px
+			}
+
+			&:last-child {
+				
+				a {
+					font-size: 1.125rem;
+					line-height: 1.2;
+					font-weight: 800;
+				}
+
+				&:after {
+					content: none;
+				}
+			}
+			
+		}
+	}
+
+}
+
+.main-navigation {
+	display: block;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}

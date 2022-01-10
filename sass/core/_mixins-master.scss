@@ -1,0 +1,168 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 14) * 1px;
+	font-size: $sizeValue * 0.875rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// edit font rendering -> tip: use for light text on dark backgrounds
+@mixin fontSmooth {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Container
+@mixin container {
+	margin-right: auto;
+  	margin-left: auto;
+  	padding-right: 0.75rem;
+  	padding-left: 0.75rem;
+}
+
+
+// Responsive
+@mixin breakpoint($point) {
+	@if $point == desktop {
+	  @media (max-width: 1440px) { @content ; }
+   }
+	@else if $point == laptop {
+	  @media (max-width: 1200px) { @content ; }
+   }
+	 @else if $point == tablet {
+	  @media (max-width: 1024px) { @content ; }
+   }
+	@else if $point == mobile {
+	  @media (max-width: 768px)  { @content ; }
+   }
+   @else if $point == xsmobile {
+	  @media (max-width: 414px)  { @content ; }
+   }
+ }
+
+
+// Buttons
+@mixin button {
+	display: inline-flex;
+	position: relative;
+	text-decoration: none;
+	line-height: 1;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	border-radius: $border__radius;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-family: $font__main;
+	
+}
+
+@mixin btn($param) {
+
+	@if $param == primary__fill {
+		background-color: $color__secondary;
+		border: 2px solid $color__secondary;
+		color: $color__white;
+		@include fontSmooth;
+	
+		&:hover {
+			background-color: $color__primary;
+			border-color: $color__primary;
+		}
+
+		fill {
+			color: $color__white;
+		}
+	}
+	   
+	@else if $param == secondary__fill {
+		background-color: $color__secondary;
+		border: 2px solid $color__secondary;
+		color: $color__primary-dark;
+		@include fontSmooth;
+
+		&:hover {
+			background-color: $color__primary-dark;
+			color: $color__white;
+			border-color: $color__primary-dark;
+		}
+	}
+	
+	@else if $param == dark__fill {
+		background-color: $color__primary-dark;
+		border: 2px solid $color__primary-dark;
+		color: $color__white;
+		@include fontSmooth;
+	
+		&:hover {
+			background-color: $color__primary;
+			color: $color__white;
+			border-color: $color__primary;
+		}
+   }
+	@else if $param == white__fill {
+		background-color: $color__white;
+		border: 2px solid $color__white;
+		color: $color__primary-dark;
+		@include fontSmooth;
+	
+		&:hover {
+			background-color: $color__primary;
+			color: $color__white;
+			border-color: $color__primary;
+		}
+	}
+	@else if $param == primary__outline {
+		background-color: transparent;
+		border: 2px solid $color__primary;
+		color: $color__primary;
+		@include fontSmooth;
+	
+		&:hover {
+			background-color: $color__primary-dark;
+			color: $color__white;
+			border-color: $color__primary-dark;
+		}
+	}
+	@else if $param == dark__outline {
+		background-color: transparent;
+		border: 2px solid $color__primary-dark;
+		color: $color__primary-dark;
+		@include fontSmooth;
+	
+		&:hover {
+			background-color: $color__primary-dark;
+			color: $color__white;
+			border-color: $color__primary-dark;
+		}
+	}
+	@else if $param == white__outline {
+		background-color: transparent;
+		border: 2px solid $color__white;
+		color: $color__white;
+		@include fontSmooth;
+	
+		&:hover {
+			background-color: $color__primary;
+			color: $color__white;
+			border-color: $color__primary;
+		}
+	}
+ }
