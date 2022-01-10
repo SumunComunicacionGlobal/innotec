@@ -1,7 +1,7 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 14) * 1px;
-	font-size: $sizeValue * 0.875rem;
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
 }
 
 // Center block
@@ -77,14 +77,14 @@
 @mixin btn($param) {
 
 	@if $param == primary__fill {
-		background-color: $color__secondary;
-		border: 2px solid $color__secondary;
+		background-color: $color__primary;
+		border: 2px solid $color__primary;
 		color: $color__white;
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary;
-			border-color: $color__primary;
+			background-color: $color__primary-dark;
+			border-color: $color__primary-dark;
 		}
 
 		fill {
@@ -95,7 +95,7 @@
 	@else if $param == secondary__fill {
 		background-color: $color__secondary;
 		border: 2px solid $color__secondary;
-		color: $color__primary-dark;
+		color: $color__white;
 		@include fontSmooth;
 
 		&:hover {
@@ -131,10 +131,10 @@
 	}
 	@else if $param == primary__outline {
 		background-color: transparent;
-		border: 2px solid $color__primary;
-		color: $color__primary;
+		border: 2px solid $color__secondary;
+		color: $color__secondary;
 		@include fontSmooth;
-	
+		a {color: $color__secondary;}
 		&:hover {
 			background-color: $color__primary-dark;
 			color: $color__white;

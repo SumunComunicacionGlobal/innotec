@@ -19,17 +19,6 @@
 	
 }
 
-.entry-content {
-	
-	.alignfull-OFF {
-		width: 100vw;
-		position: relative;
-	}
-
-	
-	
-}
-
 .wp-block-columns {
 
 	margin-bottom: $space-xl;
@@ -56,15 +45,6 @@
 
 		.wp-block-columns {
 			margin-bottom: $space-md;
-		}
-	}
-
-	&.alignfull.has-white-background-color {
-		clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 84%);
-		padding-top: 16%;
-		padding-bottom: 8%;
-		@include breakpoint(mobile) {
-			clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 96%);
 		}
 	}
 }
@@ -100,20 +80,18 @@
 
 .has-secondary-background-color {
 	background-color: $color__secondary;
-    a {color: $color__white;}
+    a:not(.wp-block-button__link){color: $color__white;}
 }
 
-.has-dark-background-color {
+.has-dark-background-color:not(a) {
 	background-color: $color__primary-dark;
 	color: $color__white;
-    a {color: $color__white;&:hover{color: $color__link;}}
+    
 }
 
 .has-ligth-background-color {
 	background-color: $color__ligth;
 }
-
-
 
 
 .wp-block-quote {
@@ -141,13 +119,14 @@
 
 
 // Custom Buttons
-.wp-block-button .wp-block-button__link{
+.wp-block-button:not(.is-style-with-icon) .wp-block-button__link{
 	@include button;
     padding: 0.65rem $space-md;
 }
 
 .wp-block-button__link {
-    @include btn(primary__fill);
+    @include btn(secondary__fill);
+
 	&.has-primary-background-color {
 		@include btn(primary__fill);
 	}
@@ -164,6 +143,7 @@
 
 .is-style-outline .wp-block-button__link {
 	@include btn(primary__outline);
+
 	&.has-primary-background-color {
 		@include btn(primary__outline);
 	}
@@ -175,6 +155,34 @@
 	}
 	&.has-white-background-color {
 		@include btn(white__outline);
+	}
+}
+
+.is-style-with-icon .wp-block-button__link {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	background-color: transparent !important;
+	border: 0;
+	@include font-size(1);
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: 800;
+	transition: (.3s all ease-in-out);
+	
+	&:before {
+		display: inline-flex;
+		content: '';
+		background-image: url('assets/icons/arrow-circle.svg');
+		background-size: 40px 40px;
+		height: 40px;
+		width: 40px;
+		margin-right: 1em;
+		transition: (.3s all ease-in-out);
+	}
+	&:hover{
+		transition: (.3s all ease-in-out);
+		margin-left: .5em;
 	}
 }
 
@@ -193,11 +201,15 @@
 	border-bottom: 8px solid;
 }
 
-ul.check-list{
+ul.is-style-check-list {
 	list-style: none;
 	line-height: 3;
 	font-size: 1.125rem;
 	position: relative;
+	@include breakpoint(tablet) {
+        padding: 0;
+    }
+	
 
 	li {
 		display: flex;
@@ -214,7 +226,7 @@ ul.check-list{
 	}
 }
 
-h2.with-arrow {
+.is-style-with-arrow {
 	display: flex;
 	align-items: center;
 	
@@ -228,6 +240,8 @@ h2.with-arrow {
 		margin-right: .5em;
 	}
 }
+
+
 
 
 

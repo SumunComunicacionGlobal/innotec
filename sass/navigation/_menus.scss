@@ -1,3 +1,37 @@
+#masthead {
+    position: absolute;
+    top: 48px;
+    z-index: 999;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 120px 1fr 1fr;
+	align-items: center;
+
+	#site-navigation {
+		justify-self: end;
+	}
+}
+
+
+.toogle-mega-menu {
+	height: 96px;
+	width: 96px;
+	border-radius: 0;
+	background: $color__primary-80;
+	position: relative;
+	display: flex;
+	align-items: center; 
+
+	&:before{
+		content: url('assets/icons/burger.svg');
+		width: 40px;
+		height: 26px;
+		
+	}
+	
+}
+
+
 #top-bar {
 	background-color: $color__primary;
 	color: white;
@@ -50,6 +84,8 @@
 	}
 
 }
+
+
 
 .main-navigation {
 	display: block;
@@ -104,21 +140,47 @@
 
 	li {
 		position: relative;
+		font-size: 16px;
+		font-weight: 800;
+		font-style: italic;
+		text-transform: uppercase;
 
 		&:hover > a,
 		&.focus > a {
+			color: $color__secondary;
+			&:after {
+				width: 48px;
+				transition: (.3s all ease-in-out);
+			}
+			
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		color: white;
+		padding: $space-xs $space-xs;
+
+		&:after {
+			content: '';
+			display: block;
+			background: $color__secondary;
+			width: 48px;
+			height: 2px;
+			width: 0%;
+		}
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $color__secondary;
+		&:after {
+			width: 48px;
+			transition: (.3s all ease-in-out);
+		}
 	}
 }
 

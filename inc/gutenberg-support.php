@@ -44,3 +44,31 @@ add_theme_support( 'editor-styles' );
 
 // Enqueue editor styles.
 add_editor_style( 'style-editor.css' );
+
+
+// Add custom block grid relationshiop ACF
+function kd_acf_init() {
+	if(function_exists('acf_register_block')) {
+		acf_register_block(array(
+			'name' => 'related',
+			'title' => __('Relacionados'),
+			'description' => __('Entradas y páginas relacionadas', 'innotec'),
+			'render_callback' => 'acf_block_callback',
+			'category' => 'design',
+			'icon' => 'grid-view',
+			'mode' => 'auto',
+			'keywords' => array('relacionadas', 'entradas', 'paginas', 'grid', 'acf'),
+		));
+	}
+}
+add_action('acf/init', 'kd_acf_init');
+
+function acf_block_callback($block) {
+	// convert name ("acf/programs") into path friendly slug ("programs")
+	$slug = str_replace('acf/', '', $block['name']);
+
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists(STYLESHEETPATH . "/template-parts/blocks/block-{$slug}.php") ) {
+		include( STYLESHEETPATH . "/template-parts/blocks/block-{$slug}.php" );
+	}
+}

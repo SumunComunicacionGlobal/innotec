@@ -10,7 +10,7 @@
  textarea {
      color: $color__text-main;
      font-family: $font__main;
-     @include font-size(1);
+     @include font-size(0.875);
      line-height: $font__line-height-body;
      @include breakpoint(laptop) {
         @include font-size(1);
@@ -64,12 +64,10 @@
  
  big {
     font-size: 1rem;
-    line-height: 1.2;
  }
 
  .big {
      font-size: 1rem;
-     line-height: 1.2;
  }
  
 strong {
@@ -114,22 +112,22 @@ h2, .text-h2 {
 }
 
 h3, .text-h3 {
-	font-size: 1.5em;
+	font-size: 1.8em;
 	@include breakpoint(laptop) {
-		font-size: 1.25em;
+		font-size: 1.5em;
 	}
 }
 
 h4, .text-h4 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: bold;
     @include breakpoint(laptop) {
-		font-size: 1.2em;
+		font-size: 1.25em;
 	}
 }
 
 h5, .text-h5 {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 500;
 }
 

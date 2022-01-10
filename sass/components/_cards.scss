@@ -1,34 +1,40 @@
 @mixin card {
-    background: $color__white;
-    border-radius: $border__radius;
-    box-shadow: 0 16px 24px 0 rgba(50,50,50,0.06);
+    background: $color__primary;
     position: relative;
-    border: 1px solid $color__gray;
-    &.card--border {
-        border-left: 8px solid $color__primary;
-    }
 
     &:hover {
         box-shadow: 0 8px 10px 1px rgba(0,0,0,0.10), 0 3px 14px 2px rgba(0,0,0,0.10), 0 5px 5px -3px rgba(0,0,0,0.20);
     }
 
     .card-img {
-        position: relative;
-        span {
-            display: flex;
-            &:hover {cursor: pointer;}
-        }
         img {
-            border-radius: $border__radius $border__radius 0 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            max-height: 12.75rem;
+            display: block;
         }
     }
     
     .card-content {
-        padding: $space-xs;
+        padding: $space-sm;
+        background-color: $color__primary;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+    }
+
+    a {
+        display: inline-block;
+    }
+
+    a::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     p {
@@ -36,7 +42,7 @@
     }
 
     svg {
-        fill: $color__primary;    
+        fill: $color__secondary;    
     }
 }
 
@@ -47,28 +53,7 @@
 
     .card-content {
         flex: 1;
-        
-        .text-caption {
-            padding-bottom: $space-xxs;
-        }
 
-        .card-content__info {
-            padding-top: $space__unit;
-            font-size: 80%;
-        }
-
-    }
-
-    .card-img__tag {
-        position: absolute;
-        right: $space-xs;
-        bottom: -16px;
-    }
-
-    .card-footer {
-        border-top: 1px solid $color__ligth;
-        padding: $space__unit $space-xs;
-        font-size: 80%;
     }
 
     svg {
@@ -76,101 +61,6 @@
     }
 }
 
-
-.card--horizontal {
-    @include card;
-    flex-direction: row;
-    display: flex;
-    margin-bottom: $space-xs;
-    
-    @include breakpoint(mobile) {
-        flex-direction: column;
-    } 
-   
-    .card-icon {
-        flex-basis: 25%;
-        padding: $space-xs;
-        border-radius: $border__radius 0 0 $border__radius;
-        display: flex;
-    }
-
-    .card-avatar {
-        flex-basis: 8.333%;
-        padding: $space-xs 0 0 $space-xs;
-        border-radius: $border__radius 0 0 $border__radius;
-    }
-    
-    .card-img {
-        flex-basis: 50%;
-        
-        a {display: flex;}
-
-        img {
-            border-radius: $border__radius 0 0 $border__radius;
-            @include breakpoint(mobile) {
-                border-radius: $border__radius $border__radius 0 0;
-            }
-        }
-
-        .card-img__tag {
-            position: absolute;
-            left: $space-xxs;
-            top: $space-xxs;
-        }
-    }
-
-    .card-content {
-        flex-basis: 60%;
-
-        .text-caption {
-            margin-bottom: $space-xxs;
-            color: $color__primary;
-        }
-
-        .entry-meta {
-            svg {
-                fill: $color__gray;
-            }
-        }
-
-        a {
-            &:before {
-                cursor: pointer;
-                content: "";
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
-    .card-footer {
-        border-left: 1px solid $color__ligth;
-        padding: $space-xs;
-        @include breakpoint(mobile) {
-            border-left: 0;
-            border-top: 1px solid $color__ligth;
-            justify-content: space-between;
-            display: flex;
-
-            > div {
-                display: flex;
-
-                &:first-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            svg {
-                width: 24px;    
-            }
-        }
-        
-    }
-}
 
 .card--blog {
     @include card;

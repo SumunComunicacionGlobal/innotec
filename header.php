@@ -45,12 +45,13 @@
 	</div>
 
 	<header id="masthead" class="site-header">
+		<div class="site-mega-menu">
+			<button class="toogle-mega-menu" aria-controls="mega-menu" aria-expanded="false"><span class="screen-reader-text"><?php esc_html_e( 'Menu', 'innotec' ); ?></span></button>
+				<nav></nav>
+		</div><!-- .site-branding -->
+
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			
-			?>
-			
+			<?php the_custom_logo();?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
