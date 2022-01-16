@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'innotec' ); ?></a>
 	
 	<div id="top-bar" class="container-fluid">
-		<div class="row between-md middle-md">
+		<div class="row between-md middle-md center-xs start-sm">
 			<?php
 				$innotec_description = get_bloginfo( 'description', 'display' );
 				if ( $innotec_description || is_customize_preview() ) :

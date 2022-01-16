@@ -1990,6 +1990,10 @@ ol {
 	list-style: decimal;
 }
 
+ol li {
+	padding-bottom: 1rem;
+}
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
@@ -2002,6 +2006,34 @@ dt {
 
 dd {
 	margin: 0 1rem 1rem;
+}
+
+ul.is-style-check-list {
+	list-style: none;
+	line-height: 3;
+	font-size: 1.125rem;
+	position: relative;
+}
+
+@media (max-width: 1024px) {
+	ul.is-style-check-list {
+		padding: 0;
+	}
+}
+
+ul.is-style-check-list li {
+	display: flex;
+	align-items: center;
+}
+
+ul.is-style-check-list li:before {
+	display: inline-flex;
+	content: '';
+	background-image: url("assets/icons/check.svg");
+	background-size: 32px 32px;
+	height: 32px;
+	width: 32px;
+	margin-right: 1.5em;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -2624,34 +2656,6 @@ thead {
 	border-bottom: 8px solid;
 }
 
-ul.is-style-check-list {
-	list-style: none;
-	line-height: 3;
-	font-size: 1.125rem;
-	position: relative;
-}
-
-@media (max-width: 1024px) {
-	ul.is-style-check-list {
-		padding: 0;
-	}
-}
-
-ul.is-style-check-list li {
-	display: flex;
-	align-items: center;
-}
-
-ul.is-style-check-list li:before {
-	display: inline-flex;
-	content: '';
-	background-image: url("assets/icons/check.svg");
-	background-size: 32px 32px;
-	height: 32px;
-	width: 32px;
-	margin-right: 1.5em;
-}
-
 .is-style-with-arrow {
 	display: flex;
 	align-items: center;
@@ -2697,6 +2701,12 @@ a:hover, a:active {
 	align-items: center;
 }
 
+@media (max-width: 768px) {
+	#masthead {
+		top: 32px;
+	}
+}
+
 #masthead #site-navigation {
 	justify-self: end;
 }
@@ -2724,6 +2734,18 @@ a:hover, a:active {
 
 #top-bar .row {
 	height: 3rem;
+}
+
+@media (max-width: 768px) {
+	#top-bar .row {
+		height: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	#top-bar .menu-top-bar-container {
+		display: none;
+	}
 }
 
 #top-bar ul#top-nav {
@@ -3006,6 +3028,7 @@ a:hover, a:active {
 
 #hero {
 	background-color: #101820;
+	background-image: linear-gradient(30deg, #101820 0%, #132645 100%);
 	background-size: cover;
 	background-position: top right;
 	position: relative;
@@ -3086,6 +3109,20 @@ a:hover, a:active {
 
 .post-type-archive-casos-exito .grid-2-col article:first-child .card .card-content .icon span::after {
 	content: 'Seguir leyendo';
+}
+
+.single-casos-exito #masthead {
+	background-image: linear-gradient(30deg, #101820 0%, #132645 100%);
+}
+
+.single-casos-exito #hero {
+	min-height: 70vh;
+}
+
+@media (max-width: 768px) {
+	.single-casos-exito #hero {
+		min-height: 50vh;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

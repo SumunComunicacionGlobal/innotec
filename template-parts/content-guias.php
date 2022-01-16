@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying casos de éxito
+ * Template part for displaying guias eficiencia energética
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

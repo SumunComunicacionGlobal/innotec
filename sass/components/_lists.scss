@@ -8,6 +8,9 @@ ul {
 
 ol {
 	list-style: decimal;
+	li {
+		padding-bottom: $space__unit;
+	}
 }
 
 li > ul,
@@ -24,3 +27,27 @@ dd {
 	margin: 0 $space__unit $space__unit;
 }
 
+ul.is-style-check-list {
+	list-style: none;
+	line-height: 3;
+	font-size: 1.125rem;
+	position: relative;
+	@include breakpoint(tablet) {
+        padding: 0;
+    }
+	
+
+	li {
+		display: flex;
+		align-items: center; 
+	}
+	li:before{
+		display: inline-flex;
+		content: '';
+		background-image: url('assets/icons/check.svg');
+		background-size: 32px 32px;
+		height: 32px;
+		width: 32px;
+		margin-right: 1.5em;
+	}
+}

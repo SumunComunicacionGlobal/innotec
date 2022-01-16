@@ -1,6 +1,9 @@
 #masthead {
     position: absolute;
     top: 48px;
+	@include breakpoint(mobile) {
+		top: 32px;
+	}
     z-index: 999;
 	width: 100%;
 	display: grid;
@@ -35,8 +38,18 @@
 #top-bar {
 	background-color: $color__primary;
 	color: white;
+	
 	.row {
 		height: 3rem;
+		@include breakpoint(mobile) {
+			height: 2rem;
+		}
+	}
+
+	.menu-top-bar-container {
+		@include breakpoint(mobile) {
+			display: none;
+		}
 	}
 
 	ul#top-nav{
