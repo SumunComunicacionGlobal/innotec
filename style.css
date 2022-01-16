@@ -1513,11 +1513,11 @@ mark, ins {
 }
 
 big {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 .big {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 strong {
@@ -2061,36 +2061,74 @@ thead {
 
 .card {
 	background: #244985;
-	position: relative;
+	background-size: cover;
+	background-position: 50%;
+	min-height: 550px;
+	width: 100%;
 	display: flex;
-	flex-direction: column;
-}
-
-.card:hover {
-	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.1), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+	position: relative;
+	justify-content: start;
+	align-items: end;
 }
 
 .card .card-img img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
 	width: 100%;
 	height: 100%;
+	max-width: none;
+	max-height: none;
+	-o-object-fit: cover;
 	object-fit: cover;
-	display: block;
+	outline: none;
+	border: none;
+	box-shadow: none;
 }
 
 .card .card-content {
 	padding: calc(2 * 1rem);
-	background-color: #244985;
+	background-color: #132645;
+	z-index: 1;
+	max-width: 53.3%;
+	height: 256px;
+	transition: 0.3s all ease-in-out;
+}
+
+@media (max-width: 1024px) {
+	.card .card-content {
+		max-width: 90%;
+	}
+}
+
+.card .card-content:hover {
+	height: 22.5rem;
+}
+
+.card .card-content:hover .card-excerpt {
+	opacity: 1;
+}
+
+.card .card-content .icon {
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 60%;
+	bottom: calc(1.5 * 1rem);
 }
 
-.card a {
+.card .card-content .card-excerpt {
+	opacity: 0;
+	transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1), opacity 700ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card .card-content a {
 	display: inline-block;
+	color: #ffffff;
 }
 
-.card a::before {
+.card .card-content a::before {
 	content: " ";
 	position: absolute;
 	top: 0;
@@ -2099,112 +2137,23 @@ thead {
 	height: 100%;
 }
 
-.card p {
+.card .card-content p {
 	margin-bottom: 0;
+	color: #ffffff;
 }
 
-.card svg {
+.card .card-content p.big {
+	color: #E45510;
+	margin-bottom: calc(0.5 * 1rem);
+	margin-top: 0;
+}
+
+.card .card-content svg {
 	fill: #E45510;
-}
-
-.card .card-content {
-	flex: 1;
-}
-
-.card svg {
-	margin-right: calc(0.5 * 1rem);
 }
 
 .card--blog {
-	background: #244985;
-	position: relative;
 	display: flex;
-	flex-direction: column;
-}
-
-.card--blog:hover {
-	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.1), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
-}
-
-.card--blog .card-img img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-}
-
-.card--blog .card-content {
-	padding: calc(2 * 1rem);
-	background-color: #244985;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 60%;
-}
-
-.card--blog a {
-	display: inline-block;
-}
-
-.card--blog a::before {
-	content: " ";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.card--blog p {
-	margin-bottom: 0;
-}
-
-.card--blog svg {
-	fill: #E45510;
-}
-
-.card--blog .card-content {
-	display: flex;
-	background-color: #244985;
-	padding: calc(0.5 * 1rem) 1rem;
-	border-radius: 0 0 24px 24px;
-	flex-grow: 1;
-}
-
-.card--blog .card-content h3 {
-	margin-bottom: 0;
-}
-
-.card--blog .card-content a {
-	color: #ffffff;
-	max-width: 280px;
-}
-
-.card--blog .card-content a:hover {
-	color: #101820;
-}
-
-.card--blog .card-content span.icon-format {
-	background-color: #101820;
-	border-radius: 24px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-}
-
-.card--blog .card-content span.icon-format:hover {
-	cursor: pointer;
-	background-color: #ffffff;
-}
-
-.card--blog .card-content span.icon-format:hover svg {
-	fill: #244985;
-}
-
-.card--blog .card-content span.icon-format svg {
-	fill: #ffffff;
 }
 
 .blocker {
@@ -3067,6 +3016,7 @@ a:hover, a:active {
 	color: white;
 	align-self: center;
 	text-transform: uppercase;
+	margin-top: calc(2 * 1rem);
 	margin-bottom: calc(2 * 1rem);
 }
 
@@ -3094,7 +3044,7 @@ a:hover, a:active {
 
 .grid-2-col {
 	display: grid;
-	grid-gap: 1.5em;
+	gap: 1.5em;
 	grid-template-columns: 1fr 1fr;
 }
 
@@ -3102,6 +3052,40 @@ a:hover, a:active {
 	.grid-2-col {
 		grid-template-columns: 1fr;
 	}
+}
+
+.post-type-archive-casos-exito .grid-2-col article:nth-child(odd) .card-content {
+	background-color: #384E72;
+}
+
+.post-type-archive-casos-exito .grid-2-col article:first-child {
+	grid-column: 1/3;
+}
+
+@media (max-width: 768px) {
+	.post-type-archive-casos-exito .grid-2-col article:first-child {
+		grid-column: 1;
+	}
+}
+
+.post-type-archive-casos-exito .grid-2-col article:first-child .card .card-content {
+	height: 550px;
+	width: 33.33%;
+	font-size: 1.125rem;
+}
+
+@media (max-width: 1024px) {
+	.post-type-archive-casos-exito .grid-2-col article:first-child .card .card-content {
+		width: 70%;
+	}
+}
+
+.post-type-archive-casos-exito .grid-2-col article:first-child .card .card-content .card-excerpt {
+	opacity: 1;
+}
+
+.post-type-archive-casos-exito .grid-2-col article:first-child .card .card-content .icon span::after {
+	content: 'Seguir leyendo';
 }
 
 /*# sourceMappingURL=style.css.map */

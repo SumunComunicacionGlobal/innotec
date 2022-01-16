@@ -15,11 +15,11 @@ if($posts) :
 
 ?>
 	<section class="grid container-fluid grid--columns-<?php echo $grid_columns; ?>  mt-6 mb-6">
-		<?php 
+        <?php foreach($posts as $post) : setup_postdata($post);
+            
+			get_template_part( 'template-parts/card', get_post_type() );
         
-            get_template_part( 'template-parts/card', get_post_type() );
-        
-        ?>
+        endforeach; wp_reset_postdata(); ?>
 	</section>
 
 <?php endif; ?>

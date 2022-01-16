@@ -50,8 +50,8 @@ add_editor_style( 'style-editor.css' );
 function kd_acf_init() {
 	if(function_exists('acf_register_block')) {
 		acf_register_block(array(
-			'name' => 'related',
-			'title' => __('Relacionados'),
+			'name' => 'tarjeta',
+			'title' => __('Tarjeta Card'),
 			'description' => __('Entradas y páginas relacionadas', 'innotec'),
 			'render_callback' => 'acf_block_callback',
 			'category' => 'design',
