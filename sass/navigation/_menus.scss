@@ -7,7 +7,7 @@
     z-index: 999;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 120px 1fr 1fr;
+	grid-template-columns: 120px 200px 1fr;
 	align-items: center;
 
 	#site-navigation {
@@ -37,7 +37,7 @@
 
 #top-bar {
 	background-color: $color__primary;
-	color: white;
+	color: $color__white;
 	
 	.row {
 		height: 3rem;
@@ -63,7 +63,7 @@
 
 			a {
 				line-height: 1;
-				color: white;
+				color: $color__white;
 				padding: 0 2.5rem 0 1.2rem;
 				&:hover {
 					color: $color__secondary;
@@ -172,7 +172,7 @@
 	a {
 		display: block;
 		text-decoration: none;
-		color: white;
+		color: $color__white;
 		padding: $space-xs $space-xs;
 
 		&:after {

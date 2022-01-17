@@ -29,14 +29,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-// Container
-@mixin container {
-	margin-right: auto;
-  	margin-left: auto;
-  	padding-right: 0.75rem;
-  	padding-left: 0.75rem;
-}
-
 
 // Responsive
 @mixin breakpoint($point) {
@@ -56,6 +48,24 @@
 	  @media (max-width: 414px)  { @content ; }
    }
  }
+
+// Container
+@mixin container {
+	margin-right: auto;
+  	margin-left: auto;
+  	padding-right: 1.5rem;
+  	padding-left: 1.5rem;
+
+	@media only screen and (min-width: 48em) {
+		width: 46rem;
+	}
+	@media only screen and (min-width: 64em) {
+		width: 62rem;
+	}
+	@media only screen and (min-width: 80em) {
+		width: 72.250rem;
+	}	
+}
 
 
 // Buttons

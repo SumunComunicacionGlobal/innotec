@@ -1,7 +1,7 @@
 .site-footer {
     background-color: $color__primary-40;
     padding: $space-xxl 0;
-    color: white;
+    color: $color__white;
     font-size: 1.125rem;
     
     ul {
@@ -10,7 +10,7 @@
     margin: 0;
         a {
             line-height: 1;
-            color: white;
+            color: $color__white;
             padding: 0;
             &:hover {
                 color: $color__secondary;

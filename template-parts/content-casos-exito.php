@@ -15,7 +15,24 @@
 		
         if ( is_singular() ) : ?>
 
-            <div class="entry-content mt-4">
+            <div class="entry-content mt-6">
+                
+                <div class="container mb-4">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10">
+                            <?php the_title( '<h1 class="entry-title has-secondary-color">', '</h1>' );?>
+                    </div>
+                </div>    
+                    <div class="row">
+                        <div class="col-xs-12 col-md-5">
+                            <h2><?php the_field ('title_casos');?></h2>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-md-offset-1">
+                            <p class="card-excerpt"><?php echo get_the_excerpt();?></p>
+                        </div>
+                    </div>     
+                </div>
+
                 <?php
                 the_content(
                     sprintf(

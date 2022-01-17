@@ -23,8 +23,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		
-        
-        // End of the loop
+        // Start related post type casos exito
         $posts = get_field('related_casos');
 
         if( $posts ): ?>
@@ -33,7 +32,7 @@ get_header();
                     <div class="row">
                         <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                             <?php setup_postdata($post);
-                                echo '<div class="col-xs-12 col-md">';
+                                echo '<div class="col-xs-12 col-md mb-2">';
                                 get_template_part( 'template-parts/card', get_post_type() );
                                 echo '</div>';
                         
@@ -44,9 +43,7 @@ get_header();
             </section>
         <?php endif; ?>
 
-
 	</main><!-- #main -->
 
 <?php
-
 get_footer();

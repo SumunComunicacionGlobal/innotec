@@ -16,7 +16,7 @@
 
     &.active span{
         background-color: $color__link;
-        color: white;
+        color: $color__white;
         border-radius: $border__radius;
     }
 }
@@ -26,11 +26,11 @@
     display: block;
     padding: .5rem .75rem;
     line-height: 1.25;
-    color: white;
+    color: $color__white;
     
     &:hover {
         background-color: $color__link;
         border-radius: $border__radius;
-        color: white;
+        color: $color__white;
     }
 }

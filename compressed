@@ -1,0 +1,31 @@
+
+style-editor.css
+ 332:15  ✖  Expected numeric font-weight notation     font-weight-notation    
+ 348:15  ✖  Expected numeric font-weight notation     font-weight-notation    
+ 385:53  ✖  Unexpected unknown type selector "fill"   selector-type-no-unknown
+ 512:24  ✖  Unexpected quotes                         function-url-quotes     
+ 548:24  ✖  Unexpected quotes                         function-url-quotes     
+ 579:15  ✖  Expected numeric font-weight notation     font-weight-notation    
+ 608:24  ✖  Unexpected quotes                         function-url-quotes     
+
+style.css
+   35:13   ✖  Unexpected quotes                                       function-url-quotes                      
+ 1712:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 1739:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 1759:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 1765:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 1788:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 2195:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 2224:24   ✖  Unexpected quotes                                       function-url-quotes                      
+ 2407:103  ✖  Expected line length to be no more than 80 characters   max-line-length                          
+ 2420:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 2593:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 2609:15   ✖  Expected numeric font-weight notation                   font-weight-notation                     
+ 2646:53   ✖  Unexpected unknown type selector "fill"                 selector-type-no-unknown                 
+ 2773:24   ✖  Unexpected quotes                                       function-url-quotes                      
+ 2809:24   ✖  Unexpected quotes                                       function-url-quotes                      
+ 2871:15   ✖  Unexpected quotes                                       function-url-quotes                      
+ 3013:2    ✖  Unexpected duplicate "width"                            declaration-block-no-duplicate-properties
+ 3177:9    ✖  Unexpected named color "white"                          color-named                              
+ 3195:9    ✖  Unexpected named color "white"                          color-named
+
