@@ -29,24 +29,23 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-
 // Responsive
 @mixin breakpoint($point) {
 	@if $point == desktop {
 	  @media (max-width: 1440px) { @content ; }
-   }
+   	}
 	@else if $point == laptop {
 	  @media (max-width: 1200px) { @content ; }
-   }
+   	}
 	 @else if $point == tablet {
 	  @media (max-width: 1024px) { @content ; }
-   }
+   	}
 	@else if $point == mobile {
 	  @media (max-width: 768px)  { @content ; }
-   }
-   @else if $point == xsmobile {
+   	}
+   	@else if $point == xsmobile {
 	  @media (max-width: 414px)  { @content ; }
-   }
+   	}
  }
 
 // Container
@@ -146,8 +145,8 @@
 		@include fontSmooth;
 		a {color: $color__secondary;}
 		&:hover {
-			background-color: $color__primary-dark;
-			color: $color__white;
+			background-color: $color__white;
+			color: $color__secondary;
 			border-color: $color__primary-dark;
 		}
 	}

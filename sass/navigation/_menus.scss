@@ -15,7 +15,6 @@
 	}
 }
 
-
 .toogle-mega-menu {
 	height: 96px;
 	width: 96px;
@@ -29,11 +28,8 @@
 		content: url('assets/icons/burger.svg');
 		width: 40px;
 		height: 26px;
-		
 	}
-	
 }
-
 
 #top-bar {
 	background-color: $color__primary;
@@ -92,13 +88,9 @@
 					content: none;
 				}
 			}
-			
 		}
 	}
-
 }
-
-
 
 .main-navigation {
 	display: block;
@@ -179,7 +171,6 @@
 			content: '';
 			display: block;
 			background: $color__secondary;
-			width: 48px;
 			height: 2px;
 			width: 0%;
 		}

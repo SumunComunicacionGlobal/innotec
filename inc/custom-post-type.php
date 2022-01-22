@@ -28,7 +28,8 @@ function custom_post_cases() {
             'query_var' => true,
             'menu_position' => 10, /* this is what order you want it to appear in on the left hand side menu */ 
             'menu_icon' => 'dashicons-portfolio', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
-            'has_archive' => __('casos-exito', 'innotec'), /* you can rename the slug here */
+            'has_archive' => true, /* you can rename the slug here */
+            'rewrite'   => array( 'slug' => __('casos-exito', 'innotec') , 'with_front' => false ), /* you can specify its url slug */
             'capability_type' => 'page',
             'hierarchical' => false,
             /* the next one is important, it tells what's enabled in the post editor */

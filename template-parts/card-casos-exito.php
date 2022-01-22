@@ -1,4 +1,4 @@
-<div class="card">  
+<div class="card--cases">  
     <div class="card-img">
         <?php the_post_thumbnail(); ?>
     </div>

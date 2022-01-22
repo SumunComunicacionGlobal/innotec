@@ -2,72 +2,70 @@
 
 /* COPY */
 
- body,
- button,
- input,
- select,
- optgroup,
- textarea {
-     color: $color__text-main;
-     font-family: $font__main;
-     @include font-size(0.875);
-     line-height: $font__line-height-body;
-     @include breakpoint(laptop) {
-        @include font-size(1);
-    }
- }
- 
- p {
-     margin-bottom: 1.5em;
-     margin-top: .5em;
- }
- 
- dfn, cite, em, i {
-     font-style: italic;
- }
- 
- blockquote {
-     font-style: italic;
-     font-size: 120%;
-     margin: 0;
- }
- 
- address {
-     margin: 0 0 1.5em;
- }
- 
- pre {
-     background: $color__ligth;
-     font-family: $font__pre;
-     @include font-size(0.9375);
-     line-height: $font__line-height-pre;
-     margin-bottom: 1.6em;
-     max-width: 100%;
-     overflow: auto;
-     padding: 1.6em;
- }
- 
- code, kbd, tt, var {
-     font-family: $font__code;
-     @include font-size(0.9375);
- }
- 
- abbr, acronym {
-     border-bottom: 1px dotted $color__ligth;
-     cursor: help;
- }
- 
- mark, ins {
-     background: $color__ligth;
-     text-decoration: none;
- }
- 
- big {
-    font-size: 1.125rem;
- }
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+color: $color__text-main;
+font-family: $font__main;
+@include font-size(0.875);
+line-height: $font__line-height-body;
 
- .big {
-     font-size: 1.125rem;
+}
+
+p {
+margin-bottom: 1.5rem;
+margin-top: .5rem;
+}
+
+dfn, cite, em, i {
+font-style: italic;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 120%;
+    margin: 0;
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    background: $color__ligth;
+    font-family: $font__pre;
+    @include font-size(0.9375);
+    line-height: $font__line-height-pre;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+
+code, kbd, tt, var {
+    font-family: $font__code;
+    @include font-size(0.9375);
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted $color__ligth;
+    cursor: help;
+}
+
+mark, ins {
+    background: $color__ligth;
+    text-decoration: none;
+}
+
+big {
+    font-size: 1.125rem;
+}
+
+.big {
+    font-size: 1.125rem;
 }
 
 .big-number {
@@ -84,11 +82,10 @@
 strong {
     font-family: $font__heding;
 }
-
  
- svg.icon {
-     fill: currentColor;
- }
+svg.icon {
+    fill: currentColor;
+}
 
 /**
  * HEADINGS 
@@ -110,7 +107,8 @@ h1 {
     
     &.display {
         font-weight: 100;
-        margin: 0;
+        text-transform: uppercase;
+        margin-bottom: $space-sm;
     }
 }
 
@@ -143,9 +141,9 @@ h5, .text-h5 {
 }
 
 h6, .text-h6 {
-    text-transform: uppercase;
+    font-size: 1.125em;
     font-weight: bold;
-    color: $color__primary;
+    
 }
 
 .text-caption {

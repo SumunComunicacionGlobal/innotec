@@ -18,15 +18,11 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+		get_template_part( 'template-parts/hero', get_post_type() );
+		
+		echo '<section class="container-fluid grid-4-col mt-2 mb-2">';
+		if ( have_posts() ) :
 
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -48,10 +44,11 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+		echo '</section>';
 		?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

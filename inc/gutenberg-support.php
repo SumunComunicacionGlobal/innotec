@@ -46,18 +46,18 @@ add_theme_support( 'editor-styles' );
 add_editor_style( 'style-editor.css' );
 
 
-// Add custom block grid relationshiop ACF
+// Add custom block Card ACF
 function kd_acf_init() {
 	if(function_exists('acf_register_block')) {
 		acf_register_block(array(
-			'name' => 'tarjeta',
+			'name' => 'card',
 			'title' => __('Tarjeta Card'),
-			'description' => __('Entradas y páginas relacionadas', 'innotec'),
+			'description' => __('Añade un card a tu entrada', 'innotec'),
 			'render_callback' => 'acf_block_callback',
-			'category' => 'design',
-			'icon' => 'grid-view',
+			'category' => 'theme',
+			'icon' => 'text-page',
 			'mode' => 'auto',
-			'keywords' => array('relacionadas', 'entradas', 'paginas', 'grid', 'acf'),
+			'keywords' => array('card', 'entradas', 'paginas', 'tarjeta', 'innotec'),
 		));
 	}
 }
@@ -65,6 +65,33 @@ add_action('acf/init', 'kd_acf_init');
 
 function acf_block_callback($block) {
 	// convert name ("acf/programs") into path friendly slug ("programs")
+	$slug = str_replace('acf/', '', $block['name']);
+
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists(STYLESHEETPATH . "/template-parts/blocks/block-{$slug}.php") ) {
+		include( STYLESHEETPATH . "/template-parts/blocks/block-{$slug}.php" );
+	}
+}
+
+// Add custom block accordion ACF
+function accordion_acf_init() {
+	if(function_exists('acf_register_block')) {
+		acf_register_block(array(
+			'name' => 'accordion',
+			'title' => __('Accordion'),
+			'description' => __('Desplegables verticales', 'innotec'),
+			'render_callback' => 'acf_block_callback',
+			'category' => 'theme',
+			'icon' => 'list-view',
+			'mode' => 'auto',
+			'keywords' => array('accordion', 'tabs', 'faqs', 'innotec'),
+		));
+	}
+}
+add_action('acf/init', 'accordion_acf_init');
+
+function accordion_acf_block_callback($block) {
+	// convert name ("acf/accordion") into path friendly slug ("accordion")
 	$slug = str_replace('acf/', '', $block['name']);
 
 	// include a template part from within the "template-parts/block" folder

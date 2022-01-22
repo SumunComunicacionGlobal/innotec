@@ -29,4 +29,20 @@ wp.domReady( () => {
 			label: 'Icono',
 		},
 	] );
+	wp.blocks.registerBlockStyle( 'core/columns', [
+		{
+			name: 'border-box-rigth',
+			label: 'Separador',
+		},
+		{
+			name: 'container-fluid',
+			label: 'Ancho completo con márgenes',
+		},
+	] );
+	wp.blocks.registerBlockStyle( 'core/cover', [
+		{
+			name: 'cover-move-up',
+			label: 'Mover arriba',
+		},
+	] );
 } );
