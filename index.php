@@ -21,7 +21,7 @@ get_header();
 
 		get_template_part( 'template-parts/hero', get_post_type() );
 		
-		echo '<section class="container-fluid grid-4-col mt-2 mb-2">';
+		echo '<section class="container grid-4-col mt-6 mb-6">';
 		if ( have_posts() ) :
 
 			/* Start the Loop */
@@ -37,14 +37,16 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+		
 		echo '</section>';
+
+		the_posts_pagination();
+
 		?>
 
 	</main><!-- #main -->

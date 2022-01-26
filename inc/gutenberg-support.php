@@ -15,7 +15,7 @@ add_theme_support( 'editor-color-palette', array(
 	array(
 		'name'  => __( 'Ligth', 'innotec' ),
 		'slug'  => 'ligth',
-		'color' => '#DFD5E6',
+		'color' => '#F4F5F7',
        ),
     array(
 		'name'  => __( 'Dark', 'innotec' ),

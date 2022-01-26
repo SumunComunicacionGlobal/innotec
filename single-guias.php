@@ -24,7 +24,7 @@ get_header();
 		endwhile; // End of the loop.
 		
         // Start related post type casos exito
-        $posts = get_field('related_casos');
+        $posts = get_field('related_guides');
 
         if( $posts ): ?>
             <section id="related-casos">

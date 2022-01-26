@@ -33,15 +33,16 @@ get_header();
 
 			endwhile;
 
-			the_posts_pagination();
-
 		else :
            
 			get_template_part( 'template-parts/content', 'none' );
             
-
 		endif;
-        echo '</section>';
+        
+		echo '</section>';
+		
+		the_posts_pagination();
+		
 		?>
 
 	</main><!-- #main -->

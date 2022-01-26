@@ -25,8 +25,8 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
-$title = get_field('card_title') ?: 'Título card';
-$text = get_field('card_text') ?: 'Aquí el texto';
+$title = get_field('card_title');
+$text = get_field('card_text');
 $image = get_field('card_image');
 $button = get_field('card_link');
 

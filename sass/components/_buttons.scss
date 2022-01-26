@@ -2,18 +2,11 @@ a.btn, .btn, button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	display: inline-flex;
-	position: relative;
-	text-decoration: none;
-	line-height: 1;
-	border-radius: $border__radius;
-	font-weight: bold;
-	transition: all 0.3s ease;
+	@include button;
+	@include btn(secondary__fill);
+    padding: 0.65rem $space-md;
 	border: 0;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-
+	
 	&:active {
 		transition: none;
 	}
@@ -28,40 +21,6 @@ input[type="submit"] {
 		flex-shrink: 0;
 	}
 }
-	
-/* Main buttons */
-a.btn--primary, .btn--primary {
-	background-color: $color__primary;
-	color: $color__white;
-	@include fontSmooth;
-
-	&:hover {
-		background-color: $color__primary;
-		color: $color__white;
-	}
-}
-
-a.btn--secondary, .btn--secondary {
-	background-color: $color__secondary;
-	color: $color__white;
-	@include fontSmooth;
-	
-	&:hover {
-		background-color: $color__primary;
-		color: $color__white;
-	}
-}
-
-
-a.btn--white, .btn--white {
-	background-color: $color__white;
-	color: $color__primary;
-	@include fontSmooth;
-
-	&:hover {
-		color: $color__primary-dark;
-	}
-}
 
 /* feedback */
 .btn[disabled] {
@@ -72,51 +31,27 @@ a.btn--white, .btn--white {
 	opacity: 0.6;
 
 	&:visited {
-		color: var(--btn-disabled-label);
+		color: $color__secondary;
 	}
 }
 
-/* button size */
-.a.btn--sm, .btn--sm {
-	padding: $space-xxs $space-xs;
-	height: 32px;
-}
+.main-navigation .btn-presu a {
+	padding: $space-xxs $space__unit;
+	background-color: $color__primary;
+	border-radius: $border__radius;
+	text-transform: none;
+	font-style: normal;
+	color: $color__white;
 
-a.btn--md, .btn--md {
-	padding: 0 $space-sm;
-	height: 40px;
-}
+	&:after {
+		content: none;
+	}
 
-a.btn--lg, .btn--lg {
-	padding: $space-xs $space-md;
-	height: 48px;
-}
-
-.a.btn--icon, .btn--icon {
-	height: 32px;
-	width: 32px;
-}
-
-.btn--full {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-}
-
-/* buttons group */
-.btn-group {
-	display: flex;
-	flex-wrap: wrap;
-
-	> * {
-		margin-right: $space-xs;
-
-		&:last-of-type {
-			margin-right: 0;
-		}
+	&:hover {
+		background-color: $color__secondary;
+		color: $color__white;
 	}
 }
-
 
 
 

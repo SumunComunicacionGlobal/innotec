@@ -18,9 +18,9 @@
                 };
             ?>
         </span>
-        <h2 class="text-h5"><?php the_title(); ?></h2>
+        <h2 class="text-h4"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
         <div class="wp-block-button is-style-with-icon mt-1">
-            <a class="wp-block-button__link has-dark-color has-text-color" id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php esc_html_e( 'Seguir leyendo', 'innotec' ); ?></a>
+            <div class="wp-block-button__link has-dark-color has-text-color" id="id-<?php the_id(); ?>"><?php esc_html_e( 'Seguir leyendo', 'innotec' ); ?></div>
         </div>  
     </div> 
 </div>

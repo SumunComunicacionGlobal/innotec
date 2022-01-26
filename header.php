@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'innotec' ); ?></a>
 	
 	<div id="top-bar" class="container-fluid">
-		<div class="row between-md middle-md center-xs start-sm">
+		<div class="row middle-xs center-xs start-md between-md">
 			<?php
 				$innotec_description = get_bloginfo( 'description', 'display' );
 				if ( $innotec_description || is_customize_preview() ) :
@@ -47,15 +47,15 @@
 	<header id="masthead" class="site-header">
 		<div class="site-mega-menu">
 			<button class="toogle-mega-menu" aria-controls="mega-menu" aria-expanded="false"><span class="screen-reader-text"><?php esc_html_e( 'Menu', 'innotec' ); ?></span></button>
-				<nav></nav>
 		</div><!-- .site-branding -->
 
 		<div class="site-branding">
 			<?php the_custom_logo();?>
 		</div><!-- .site-branding -->
+		
+		<div class="site-btn--contact"><a href="/contacto/"><span class="screen-reader-text"><?php esc_html_e( 'Contacto', 'innotec' ); ?></span></a></div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'innotec' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(

@@ -15,20 +15,18 @@
 		
         if ( is_singular() ) : ?>
 
-            <div class="entry-content mt-4">
+            <div class="entry-single mt-6">
 				
-				<header class="entry-header">
+                <div class="entry-meta mb-4">    
 					<?php
 					if ( 'post' === get_post_type() ) :
 						?>
-						<div class="entry-meta">
 							<?php
-							innotec_posted_on();
+							innotec_entry_footer();
 							innotec_posted_by();
 							?>
-						</div><!-- .entry-meta -->
 					<?php endif; ?>
-				</header><!-- .entry-header -->
+                </div><!-- .entry-meta -->
 
                 <?php
                 the_content(
@@ -54,10 +52,6 @@
                 );
                 ?>
             </div><!-- .entry-content -->
-
-            <footer class="entry-footer">
-                <?php innotec_entry_footer(); ?>
-            </footer><!-- .entry-footer -->
 		
         <?php else :
         

@@ -17,7 +17,8 @@
 .mb-8 {margin-bottom: $space-xxl;} // 80px
 .mb-9 {margin-bottom: $space-xxxl;} // 96px
 
-.ml-2 {margin-left: 2em;}
+.ml-2 {margin-left: $space-xs;}
+.mr-2 {margin-right: $space-xs;}
 
 .pt-0 {padding-top: $space-xxs;} // 8px
 .pt-1 {padding-top: $space__unit;} // 16px

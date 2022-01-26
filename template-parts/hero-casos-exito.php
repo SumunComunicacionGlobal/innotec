@@ -1,16 +1,20 @@
-<?php
-    if (is_post_type_archive()) {
-        echo'<header id="hero" class="entry-header"><div class="container">';
-        post_type_archive_title( '<h1 class="page-title-archive display">', '</h1>' );
-    }
-    elseif (is_single()) {
+<?php if (is_post_type_archive()) { ?>
+    <header id="hero" class="entry-header-archive">
+        <div class="container">
+            <?php post_type_archive_title( '<h1 class="page-title-archive display">', '</h1>' );?>
+        </div>   
+    </header><!-- #hero -->
+<?php }; ?>
+
+<?php if (is_single()) { 
+    if ( has_post_thumbnail() ) : 
         $get_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
-        echo'<header id="hero" class="entry-header" style="background-image: url('.$get_image_url.')"><div class="container">';
-        post_type_archive_title( '<h1 class="page-title-archive display">', '</h1>' );
-    }
-?>
-    </div>   
-</header><!-- #hero -->
+        $image_background = 'background-image: url('.$get_image_url.')';
+    endif; ?>
+
+    <header id="hero" class="entry-header-archive" style="<?php echo $image_background ;?>"> 
+    </header><!-- #hero -->
+<?php }; ?>
 
 <div id="breadcrumbs">
     <div class="container-fluid">

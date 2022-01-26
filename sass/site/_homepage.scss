@@ -53,6 +53,7 @@
                     height: 100%;
                     display: block;
                     opacity: 0.8;
+                    top: 0;
                 }
             }
 
@@ -155,7 +156,7 @@
         .number {
             top: auto;
             font-size: 1.5em;
-            margin-bottom: $space-xs;
+            margin-bottom: $space-xxs;
             color: $color__secondary;
         }
     }

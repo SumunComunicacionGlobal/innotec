@@ -63,9 +63,12 @@
 	}
 	@media only screen and (min-width: 80em) {
 		width: 72.250rem;
-	}	
+	}
+	
+	@media only screen and (min-width: 90em) {
+		width: 88rem;
+	}
 }
-
 
 // Buttons
 @mixin button {
@@ -133,7 +136,7 @@
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary;
+			background-color: $color__primary !important;
 			color: $color__white;
 			border-color: $color__primary;
 		}

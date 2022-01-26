@@ -1,17 +1,20 @@
 #masthead {
     position: absolute;
     top: 48px;
-	@include breakpoint(mobile) {
-		top: 32px;
-	}
     z-index: 999;
 	width: 100%;
 	display: grid;
 	grid-template-columns: 120px 200px 1fr;
 	align-items: center;
+	@include breakpoint(tablet) {
+		top: 32px;
+		grid-template-columns: 80px 1fr 80px;
+		gap: 1em;
+	}
 
 	#site-navigation {
 		justify-self: end;
+		padding-right: 1.5rem;
 	}
 }
 
@@ -19,15 +22,40 @@
 	height: 96px;
 	width: 96px;
 	border-radius: 0;
-	background: $color__primary-80;
 	position: relative;
 	display: flex;
-	align-items: center; 
+	align-items: center;
+	justify-content: center; 
+
+	background: $color__primary-80;
+	
+	@include breakpoint(tablet) {
+		height: 80px;
+		width: 80px;
+	}
 
 	&:before{
 		content: url('assets/icons/burger.svg');
 		width: 40px;
 		height: 26px;
+	}
+}
+
+.site-btn--contact {
+	height: 80px;
+	width: 80px;
+	position: relative;
+	align-items: center;
+	justify-content: center; 
+	background: $color__secondary;
+	display: none;
+	
+	@include breakpoint(tablet) {
+		display: flex;
+	}
+
+	a:after{
+		content: url('assets/icons/bubble-chat.png');
 	}
 }
 
@@ -37,13 +65,13 @@
 	
 	.row {
 		height: 3rem;
-		@include breakpoint(mobile) {
+		@include breakpoint(tablet) {
 			height: 2rem;
 		}
 	}
 
 	.menu-top-bar-container {
-		@include breakpoint(mobile) {
+		@include breakpoint(tablet) {
 			display: none;
 		}
 	}
@@ -95,9 +123,14 @@
 .main-navigation {
 	display: block;
 	width: 100%;
+	@include breakpoint(tablet) {
+		display: none;
+	}
 
 	ul {
-		display: none;
+		display: flex;
+		justify-content: end;
+		align-items: center;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -154,7 +187,7 @@
 		&.focus > a {
 			color: $color__secondary;
 			&:after {
-				width: 48px;
+				width: 32px;
 				transition: (.3s all ease-in-out);
 			}
 			
@@ -182,39 +215,28 @@
 	.current-menu-ancestor > a {
 		color: $color__secondary;
 		&:after {
-			width: 48px;
+			width: 32px;
 			transition: (.3s all ease-in-out);
 		}
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
 
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
+	
+	@include container;
 
 	.nav-links {
 		display: flex;
+		margin-top: $space-md;
+		margin-bottom: $space-md;
+
+		span {
+			color: $color__text-main;
+		}
 	}
 
 	.nav-previous {

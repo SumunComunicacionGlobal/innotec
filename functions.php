@@ -50,6 +50,21 @@ function innotec_setup() {
 	add_image_size( 'icon-card', 80, 80, true);
 	add_image_size( 'card-blog', 360, 360, array( 'left', 'top' ));
 
+	// Change image size on wp-query gutenberg block
+	add_filter( 'render_block_core/post-featured-image', 'test_render_post_featured_image_block', 10, 2 );
+		function test_render_post_featured_image_block( $block_content, $block ) {
+
+			$image_size = 'card-blog'; // Cambia por el tamaño que quieras mostrar
+
+			$find = get_the_post_thumbnail_url( null, 'full' );
+			$replace = get_the_post_thumbnail_url( null, $image_size );
+
+			$block_content = str_replace( $find, $replace, $block_content );
+
+			return $block_content;
+			
+		}
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(

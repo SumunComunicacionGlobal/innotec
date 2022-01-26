@@ -2,18 +2,16 @@
 
 .entry-content {
 
-	& > [class^="wp-block-"]:not(.alignfull) {
-		max-width: 72.250rem;
+	& > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
 		@include container;
 	}
 
-	& > [class^="wp-block-"]:not(.alignfull).alignwide {
-		max-width: 80%;
-		@include container;
+	& > [class*="wp-block-"]:not(.alignfull).alignwide {
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
 	}
 
-	.alignfull > .wp-block-group__inner-container {
-		
+	.alignfull > .wp-block-group__inner-container {	
 		@include container;
 	}
 	
@@ -206,10 +204,22 @@
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-    max-width: 168px;
-	height: 8px;
+    width: 168px;
 	color: $color__primary;
 	border-bottom: 8px solid;
+}
+
+.wp-block-gallery {
+	
+	&.has-nested-images figure.wp-block-image img {
+		width: fit-content;	
+	}
+
+	&.aligncenter {
+		img {
+			align-self: center;
+		}
+	}
 }
 
 .is-style-with-arrow {
@@ -227,6 +237,10 @@
 	}
 	&.has-text-align-right {
 		justify-content: end;
+	}
+	&.text-h6 {
+		margin-top: 0;
+		margin-bottom: 2.3em;
 	}
 }
 
@@ -303,14 +317,7 @@
 		font-size: 1.75rem;
 		font-weight: 100;
 	}
-
-	ul.wp-block-post-template.columns-5 {
-		li {
-			&:nth-child(even) {
-				margin-top: $space-xxl;
-			}
-		}
-	}
+	
 	.wp-block-post-title a {
 		color: $color__primary-80;
 
@@ -320,7 +327,7 @@
 	}
 }
 
-#accordion-block {
+.accordion-block {
 	
 	.accordion-btn {
 		background-color: $color__gray;
@@ -336,6 +343,7 @@
 		font-size: 1.25rem;
 		position: relative;
 		margin-bottom: 1px;
+		color: $color__text-main;
 
 		&:hover, .active & {
 			background-color: $color__primary-40;
@@ -355,7 +363,6 @@
 			content: '\002B';
 			color: $color__white;
 			background-color: $color__primary;
-			font-weight: 100;
 			border-radius: 100%;
 			font-size: 1.25rem;
 			width: $space-md;
@@ -378,7 +385,9 @@
 	}
 }
   
-
+.wp-block-media-text.has-media-on-the-right {
+	border: $space__unit solid $color__white;
+}
   
   
 
