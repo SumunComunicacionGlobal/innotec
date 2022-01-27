@@ -3248,7 +3248,6 @@ thead {
 	transition: 0.4s;
 	justify-content: start;
 	padding: 1rem calc(1.5 * 1rem);
-	font-size: 1.25rem;
 	position: relative;
 	margin-bottom: 1px;
 	color: #101820;
@@ -3258,6 +3257,11 @@ thead {
 .active .accordion-block .accordion-btn {
 	background-color: #384e72;
 	color: #fff;
+}
+
+.accordion-block .accordion-btn h3 {
+	font-size: 1.25rem;
+	margin: 0;
 }
 
 .accordion-block .accordion-btn span {
@@ -3964,16 +3968,17 @@ a:active {
 	margin-top: calc(2 * 1rem);
 }
 
-#hero p {
+#hero h2 {
 	color: #e45510;
 	font-size: 24px;
 	max-width: 50%;
+	font-weight: normal;
 	line-height: 1.3;
 }
 
 @media (max-width: 768px) {
 
-	#hero p {
+	#hero h2 {
 		max-width: 100%;
 	}
 }

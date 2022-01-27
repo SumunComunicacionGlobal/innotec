@@ -8,7 +8,8 @@ endif; ?>
         <?php
             the_title( '<h1 class="display">', '</h1>' );
             if ( has_excerpt() ) :
-                the_excerpt();
+                $excerpt = get_the_excerpt();
+                echo '<h2>'.$excerpt.'</h2>';
              endif;
         ?>
         <?php 

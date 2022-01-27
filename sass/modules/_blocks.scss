@@ -340,7 +340,6 @@
 		transition: 0.4s;
 		justify-content: start;
 		padding: $space__unit $space-xs;
-		font-size: 1.25rem;
 		position: relative;
 		margin-bottom: 1px;
 		color: $color__text-main;
@@ -348,6 +347,11 @@
 		&:hover, .active & {
 			background-color: $color__primary-40;
 			color: $color__white;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin: 0;
 		}
 
 		span {

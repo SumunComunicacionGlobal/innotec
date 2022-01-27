@@ -155,3 +155,9 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+function ultra_navigation_markup_filter( $template, $class ) {
+	return str_replace( 'h2', 'p', $template );
+}
+add_filter( 'navigation_markup_template', 'ultra_navigation_markup_filter', 10, 2 );

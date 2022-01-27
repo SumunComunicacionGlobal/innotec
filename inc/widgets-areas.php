@@ -24,8 +24,8 @@ function innotec_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'innotec' ),
 			'before_widget' => '<div id="%1$s" class="col-md col-xs-12 %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title">',
-			'after_title'   => '</h5>',
+			'before_title'  => '<h3 class="text-h5 widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 

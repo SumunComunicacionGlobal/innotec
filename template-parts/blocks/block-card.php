@@ -43,7 +43,7 @@ endif;
         <?php echo wp_get_attachment_image( $image, 'full' ); ?>
     </div>
     <div class="card-content">
-        <p class="text-h2"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" title="<?php echo esc_html( $link_title ); ?>"><?php echo $title; ?></a></p>
+        <h3 class="text-h2"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" title="<?php echo esc_html( $link_title ); ?>"><?php echo $title; ?></a></h3>
         <div class="icon is-style-with-icon"><span class="wp-block-button__link"><?php echo esc_html( $link_title ); ?></span></div>
         <p class="card-excerpt"><?php echo $text; ?></p>
     </div>

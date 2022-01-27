@@ -740,7 +740,6 @@
 	transition: 0.4s;
 	justify-content: start;
 	padding: 1rem calc(1.5 * 1rem);
-	font-size: 1.25rem;
 	position: relative;
 	margin-bottom: 1px;
 	color: #101820;
@@ -750,6 +749,11 @@
 .active .accordion-block .accordion-btn {
 	background-color: #384e72;
 	color: #fff;
+}
+
+.accordion-block .accordion-btn h3 {
+	font-size: 1.25rem;
+	margin: 0;
 }
 
 .accordion-block .accordion-btn span {
