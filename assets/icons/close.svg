@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CLose</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Menu-close" transform="translate(-43.000000, -43.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Line-3" transform="translate(44.000000, 44.000000)">
+                <line x1="0.5" y1="0.5" x2="33" y2="33"></line>
+                <line x1="0.5" y1="0.5" x2="33" y2="33" transform="translate(16.500000, 16.500000) rotate(-90.000000) translate(-16.500000, -16.500000) "></line>
+            </g>
+        </g>
+    </g>
+</svg>

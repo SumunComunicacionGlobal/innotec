@@ -17,6 +17,18 @@ function innotec_widgets_init() {
 		)
 	);
 
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Social and Contact in Mega Menú', 'innotec' ),
+			'id'            => 'mega-menu-social',
+			'description'   => esc_html__( 'Add widgets here.', 'innotec' ),
+			'before_widget' => '<section id="%1$s" class="mb-2 widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<p class="widget-title text-h4">',
+			'after_title'   => '</p>',
+		)
+	);
+
     register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer', 'innotec' ),

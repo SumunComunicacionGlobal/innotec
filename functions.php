@@ -65,9 +65,26 @@ function innotec_setup() {
 			
 		}
 
+	add_filter( 'nav_menu_link_attributes', 'innotec_menu_atts', 10, 4 );
+	function innotec_menu_atts( $atts, $item, $args, $depth ) {
+
+		if ( $args->theme_location != 'mega-menu' || $depth > 0 ) return $atts;
+
+		$menu_widget_id = get_field( 'menu_widget_id', $item->ID );
+
+		if ( $menu_widget_id ) {
+			$atts['data-widget-id'] = 'menu-widget-' . $menu_widget_id;
+		}
+
+		return $atts;
+		
+	}
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
+			'mega-menu' => esc_html__( 'Mega Menu', 'innotec' ),
+			'mega-menu-secondary' => esc_html__( 'Mega Menu Secondary', 'innotec' ),
 			'main-menu' => esc_html__( 'Primary', 'innotec' ),
 			'top-menu' => esc_html__( 'Top Bar', 'innotec' ),
 			'footer-menu' => esc_html__( 'Footer legal', 'innotec' ),

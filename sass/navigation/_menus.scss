@@ -39,6 +39,13 @@
 		width: 40px;
 		height: 26px;
 	}
+
+	&.close {
+
+		&:before {
+			content: url('assets/icons/close.svg');
+		}
+	}
 }
 
 .site-btn--contact {

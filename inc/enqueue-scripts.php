@@ -3,6 +3,8 @@
 function innotec_scripts() {
 	wp_enqueue_style( 'innotec-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	wp_enqueue_script( 'jquery' );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
