@@ -161,3 +161,11 @@ function ultra_navigation_markup_filter( $template, $class ) {
 	return str_replace( 'h2', 'p', $template );
 }
 add_filter( 'navigation_markup_template', 'ultra_navigation_markup_filter', 10, 2 );
+
+add_filter( 'the_content', 'innotec_after_content_link_guias', 10 );
+function innotec_after_content_link_guias( $content ) {
+	ob_start();
+	get_template_part( 'template-parts/link-guia' );
+
+	return $content . ob_get_clean();
+}
