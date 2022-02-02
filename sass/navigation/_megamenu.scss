@@ -33,6 +33,7 @@ body.menu-open {
 		z-index: 0;
 		position: absolute;
 		transition: all .3s ease;
+		font-size: 1rem;
 
 		&.active {
 			// display: block;
@@ -42,6 +43,23 @@ body.menu-open {
 			@include breakpoint(mobile) {
 				display: none;
 			}
+		}
+
+		a {
+			font-weight: 700;
+
+			&:not(.btn):not(.wp-block-button__link):before {
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: $color__secondary;
+				display: inline-block;
+				margin-right: 10px;
+			}
+		}
+
+		p {
+			margin-bottom: .5rem;
 		}
 	}
 }
