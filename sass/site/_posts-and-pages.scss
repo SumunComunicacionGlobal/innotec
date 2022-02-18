@@ -112,4 +112,31 @@ ul.wp-block-post-template.columns-5 {
 	display: block;
 }
 
+.single {
 
+	.entry-meta {
+		padding-top: $space-lg;
+
+		> span {
+			display: block;
+			margin-bottom: $space__unit;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			width: 8rem;
+			height: $space__unit / 2;
+			background-color: $color__secondary;
+			margin-bottom: $space-xs;
+		}
+
+		a {
+			font-weight: bold;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

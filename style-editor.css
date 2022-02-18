@@ -270,6 +270,9 @@
     height: 8px;
     display: block; }
 
+.wp-block-button:not(:last-child) {
+  margin-right: 1rem; }
+
 .wp-block-button:not(.is-style-with-icon) .wp-block-button__link {
   display: inline-flex;
   position: relative;
@@ -513,7 +516,7 @@
   outline: none;
   transition: 0.4s;
   justify-content: start;
-  padding: 1rem calc(1.5 * 1rem);
+  padding: 1rem 0;
   position: relative;
   margin-bottom: 1px;
   color: #101820; }
@@ -525,9 +528,6 @@
     margin: 0; }
   .accordion-block .accordion-btn span {
     line-height: 1.8; }
-  .accordion-block .accordion-btn > div {
-    width: 72rem;
-    margin: 0 auto; }
   .accordion-block .accordion-btn span:before {
     content: '\002B';
     color: #ffffff;
@@ -547,7 +547,8 @@
 .accordion-block .panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out; }
+  transition: max-height 0.2s ease-out;
+  padding-left: calc(1.5rem + 40px + .5rem + .5rem); }
 
 .wp-block-media-text.has-media-on-the-right {
   border: 1rem solid #ffffff; }

@@ -118,6 +118,9 @@
 
 
 // Custom Buttons
+.wp-block-button:not(:last-child) {
+	margin-right: $space__unit;
+}
 .wp-block-button:not(.is-style-with-icon) .wp-block-button__link{
 	@include button;
     padding: 0.65rem $space-md;
@@ -339,7 +342,8 @@
 		outline: none;
 		transition: 0.4s;
 		justify-content: start;
-		padding: $space__unit $space-xs;
+		// padding: $space__unit $space-xs;
+		padding: $space__unit 0;
 		position: relative;
 		margin-bottom: 1px;
 		color: $color__text-main;
@@ -358,10 +362,10 @@
 			line-height: 1.8;
 		}
 		
-		& > div {
-			width: 72rem;
-			margin: 0 auto;
-		}
+		// & > div {
+			// width: 72rem;
+			// margin: 0 auto;
+		// }
 
 		span:before {
 			content: '\002B';
@@ -386,6 +390,7 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
+		padding-left: calc(1.5rem + 40px + .5rem + .5rem);
 	}
 }
   

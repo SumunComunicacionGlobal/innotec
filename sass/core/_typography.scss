@@ -10,7 +10,7 @@ optgroup,
 textarea {
 color: $color__text-main;
 font-family: $font__main;
-@include font-size(0.875);
+// @include font-size(0.875);
 line-height: $font__line-height-body;
 
 }
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .text-h1  {
-	font-size: 3em;
+	font-size: 2.875rem;
 	@include breakpoint(laptop) {
 		font-size: 2.5em;
     }
@@ -113,7 +113,7 @@ h1, .text-h1  {
 }
 
 h2, .text-h2 {
-    font-size: 2em;
+    font-size: 1.875em;
     font-weight: bold;
 	@include breakpoint(laptop) {
 		font-size: 1.8em;
@@ -121,14 +121,14 @@ h2, .text-h2 {
 }
 
 h3, .text-h3 {
-	font-size: 1.7em;
+	font-size: 1.575em;
 	@include breakpoint(laptop) {
 		font-size: 1.5em;
 	}
 }
 
 h4, .text-h4 {
-    font-size: 1.5em;
+    font-size: 1.375em;
     font-weight: bold;
     @include breakpoint(laptop) {
 		font-size: 1.25em;
@@ -136,12 +136,12 @@ h4, .text-h4 {
 }
 
 h5, .text-h5 {
-    font-size: 1.25em;
+    font-size: 1.125em;
     font-weight: 500;
 }
 
 h6, .text-h6 {
-    font-size: 1.125em;
+    font-size: 1em;
     font-weight: bold;
     
 }

@@ -255,3 +255,42 @@
 		flex: 1 0 50%;
 	}
 }
+
+.wp-block-latest-posts__list,
+.widget_nav_menu .menu,
+.wp-block-categories-list {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		position: relative;
+		margin-bottom: $space__unit / 2;
+
+		a {
+			line-height: $font__line-height-header !important;
+			color: $color__white;
+			padding: 0 2.5rem 0 1.2rem !important;
+			display: block;
+			@include font-size(0.875);
+
+			&:hover {
+				color: $color__secondary;
+			}
+		}
+
+		.wp-block-latest-posts__post-date {
+			padding-left: 1.2rem;
+		}
+
+		&:after {
+			content: '';
+			background-color: $color__secondary;
+			height: 9px;
+			width: 9px;
+			position: absolute;
+			left: 0;
+			top: 6px
+		}
+
+	}
+}
