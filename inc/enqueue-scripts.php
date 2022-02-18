@@ -26,3 +26,17 @@ function innotec_gutenberg_scripts() {
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'innotec_gutenberg_scripts' );
+
+function innotec_footer_inline_scripts() {
+	?>
+
+	<script>	
+	  jQuery('.abrir-chat, a[href="#abrir-chat"]').click(function (e) {
+	    e.preventDefault();
+	    jQuery('#lbContactHeaderFloat').trigger('click');
+	  });
+	</script>
+
+	<?php
+}
+add_action( 'wp_footer', 'innotec_footer_inline_scripts', 10, 1 );
