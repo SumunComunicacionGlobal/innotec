@@ -3115,9 +3115,7 @@ body.menu-open {
 .layout-sidebar {
   display: grid;
   grid-template-columns: 70% 30%;
-  gap: 1.5rem;
-  padding-left: 3em;
-  padding-right: 3em; }
+  gap: 1.5rem; }
   @media (max-width: 1024px) {
     .layout-sidebar {
       grid-template-columns: 1fr; } }
