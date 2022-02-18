@@ -17,17 +17,6 @@
 
             <div class="entry-single mt-6">
 				
-                <div class="entry-meta mb-4">    
-					<?php
-					if ( 'post' === get_post_type() ) :
-						?>
-							<?php
-							innotec_entry_footer();
-							innotec_posted_by();
-							?>
-					<?php endif; ?>
-                </div><!-- .entry-meta -->
-
                 <?php
                 the_content(
                     sprintf(
@@ -51,6 +40,18 @@
                     )
                 );
                 ?>
+ 
+                <div class="entry-meta mb-4">    
+                    <?php
+                    if ( 'post' === get_post_type() ) :
+                        ?>
+                            <?php
+                            innotec_entry_footer();
+                            ?>
+                    <?php endif; ?>
+                </div><!-- .entry-meta -->
+
+
             </div><!-- .entry-content -->
 		
         <?php else :
