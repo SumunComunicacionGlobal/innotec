@@ -19,14 +19,16 @@
 
             <div id="slider-thumb">
                 <?php while( have_rows('slider_home') ): the_row(); $a++; ?>
-                <label for="slide-<?php echo $a ;?>">
-                    <div class="slide-title">
-                        <div class="number">0<?php echo $a ;?>.</div>
-                        <h3 class="text-h2"><?php the_sub_field('slide_title_thumb'); ?></h3>
-                        <span class=""><?php the_sub_field('slide_description_thumb'); ?></span>
-                        <div class="icon is-style-with-icon mt-2"><span class="wp-block-button__link"></span></div>
-                    </div>
-                </label>
+                <div class="slider-thumb---box">
+                    <label for="slide-<?php echo $a ;?>">
+                        <div class="slider-thumb---content">
+                            <div class="number">0<?php echo $a ;?>.</div>
+                            <h3 class="text-h2"><?php the_sub_field('slide_title_thumb'); ?></h3>
+                            <span class=""><?php the_sub_field('slide_description_thumb'); ?></span>
+                            <div class="icon is-style-with-icon mt-2"><span class="wp-block-button__link"></span></div>
+                        </div>
+                    </label>
+                </div>
                 <?php endwhile; ?>
             </div><!-- #slider-thumb -->
             

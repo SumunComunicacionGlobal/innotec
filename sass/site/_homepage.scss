@@ -1,6 +1,6 @@
 #slider--hero {
     position: relative;
-    height: 94vh;
+    height: 100%;
     width: 100%;
     background-image: radial-gradient(76% 95%, #002C4E 13%, #000612 100%);
 
@@ -60,14 +60,14 @@
             .slide-content {
                 color: $color__white;
                 padding-left: 8%;
-                margin-bottom: $space-xxl;
+                margin-bottom: $space-xl;
+                margin-top: $space-xxxl;
+                padding-top: $space-xl;
                 max-width: 60%;
                 z-index: 1;
 
                 @include breakpoint(mobile) {
                     max-width: 100%;
-                    padding-top: $space-xl;
-                    margin-top: $space-xxxl;
                     padding-right: 8%;
                 }
 
@@ -79,31 +79,20 @@
     }
     
     #slider-thumb {
-        height: 34vh;
-        width: auto;
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        justify-content: flex-end;
+        display: grid;
+        grid-template-columns: repeat( 3, 33.333% );
+        justify-items: stretch;
+        margin-left: 16.6%;
         
         @include breakpoint(mobile) {
             display: block;
             position: relative;
+            margin-left: 0;
         }
 
-        label {
-            font-size: 100%;
-            height: 100%;
-            width: 25%;
+        .slider-thumb---box {
             background-color: $color__primary-80;
-            display: block;
-            float: left;
-            position: relative;
-            background-size: 100%;
-            background-position: center;
-            transition: all 0.3s ease-out;
+            display: flex;
 
             &:nth-child(2) {
                 background-color: $color__primary-60;
@@ -111,14 +100,16 @@
             &:nth-child(3) {
                 background-color: $color__primary-40;
             }
-            
-            @include breakpoint(tablet) {
-            width: 33.33vw;
-            }
 
-            @include breakpoint(mobile) {
-                width: 100vw;
-            }
+        }
+
+        label {
+            font-size: 100%;
+            height: 100%;
+            display: block;
+            float: left;
+            position: relative;
+            transition: all 0.3s ease-out;
 
             &::before {
                 content: '';
@@ -139,10 +130,13 @@
                     transition: 0.3s all ease-in-out;
                 }
             }
+        }
 
-        .slide-title {
+        .slider-thumb---content {
             color: $color__white;
             padding: $space-sm;
+            height: 100%;
+            display: grid;
         }
 
         p {
@@ -153,12 +147,17 @@
                 display: none;
             }
         }
+        
         .number {
             top: auto;
             font-size: 1.5em;
             margin-bottom: $space-xxs;
             color: $color__secondary;
         }
-    }
+
+        .icon {
+            align-self: end;
+        }
+    
     }
 }

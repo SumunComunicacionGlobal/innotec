@@ -56,6 +56,11 @@
     padding: $space-xs 0;
     color: white;
 
+    a {
+        color: $color__secondary;
+        &:hover {color: $color__white;}
+    }
+
     p {
         margin: 0;
     }
