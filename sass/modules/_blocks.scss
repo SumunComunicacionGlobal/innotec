@@ -2,7 +2,7 @@
 
 .entry-content {
 
-	& > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
+	& > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		@include container;
 	}
 

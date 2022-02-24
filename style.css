@@ -2516,7 +2516,7 @@ thead {
 }
 
 /* blocks */
-.entry-content > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 1.5rem;
@@ -2525,25 +2525,25 @@ thead {
 }
 
 @media only screen and (min-width: 48em) {
-	.entry-content > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
+	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		width: 46rem;
 	}
 }
 
 @media only screen and (min-width: 64em) {
-	.entry-content > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
+	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		width: 62rem;
 	}
 }
 
 @media only screen and (min-width: 80em) {
-	.entry-content > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
+	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		width: 72.250rem;
 	}
 }
 
 @media only screen and (min-width: 91em) {
-	.entry-content > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
+	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		width: 88rem;
 	}
 }
