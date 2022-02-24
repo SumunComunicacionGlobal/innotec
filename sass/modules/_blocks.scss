@@ -7,8 +7,8 @@
 	}
 
 	& > [class*="wp-block-"]:not(.alignfull).alignwide {
-		margin-right: 1.5rem;
-		margin-left: 1.5rem;
+		margin-right: 2rem;
+		margin-left: 2rem;
 	}
 
 	.alignfull > .wp-block-group__inner-container {	
@@ -118,9 +118,6 @@
 
 
 // Custom Buttons
-.wp-block-button:not(:last-child) {
-	margin-right: $space__unit;
-}
 .wp-block-button:not(.is-style-with-icon) .wp-block-button__link{
 	@include button;
     padding: 0.65rem $space-md;
@@ -342,7 +339,6 @@
 		outline: none;
 		transition: 0.4s;
 		justify-content: start;
-		// padding: $space__unit $space-xs;
 		padding: $space__unit 0;
 		position: relative;
 		margin-bottom: 1px;
@@ -353,22 +349,22 @@
 			color: $color__white;
 		}
 
+		.container {
+			display: flex;
+			align-items: center;
+
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
+
+		}
+
 		h3 {
 			font-size: 1.25rem;
 			margin: 0;
 		}
 
 		span {
-			line-height: 1.8;
-		}
-		
-		// & > div {
-			// width: 72rem;
-			// margin: 0 auto;
-		// }
-
-		span:before {
-			content: '\002B';
 			color: $color__white;
 			background-color: $color__primary;
 			border-radius: 100%;
@@ -378,12 +374,20 @@
 			margin-right: $space-xxs;
 			float: left;
 			text-align: center;
+			line-height: 1.8;
+
+			&::before {
+				content: '\002B';
+			}
 		}
 	}
 
-	.active span:before {
-		content: "\2212";
+	.active span {
 		background-color: $color__secondary;
+		
+		&::before {
+			content: '\2212';
+		}
 	}
 	
 	.panel {

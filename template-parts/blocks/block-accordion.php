@@ -22,7 +22,12 @@ if( !empty($block['anchor']) ) {
         <?php while( have_rows('accordion') ): the_row(); 
             $image = get_sub_field('accordion_image');
             ?>
-            <button class="accordion-btn"><div class="container"><h3><span><?php the_sub_field('accordion_title'); ?></span></h3></div></button>
+            <button class="accordion-btn">
+                <div class="container">
+                    <span><div class="screen-reader-text"><?php esc_html_e( 'Abrir', 'innotec' ); ?></div></span>
+                    <h3><?php the_sub_field('accordion_title'); ?></h3>
+                </div>
+            </button>
             <div class="container panel">
                 <div class="row mt-4 mb-4">
                     <?php if( get_sub_field('accordion_image') ): ?>

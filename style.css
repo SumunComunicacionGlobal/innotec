@@ -2521,6 +2521,7 @@ thead {
 	margin-left: auto;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
+	width: 100%;
 }
 
 @media only screen and (min-width: 48em) {
@@ -2548,8 +2549,8 @@ thead {
 }
 
 .entry-content > [class*="wp-block-"]:not(.alignfull).alignwide {
-	margin-right: 1.5rem;
-	margin-left: 1.5rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
 }
 
 .entry-content .alignfull > .wp-block-group__inner-container {
@@ -2557,6 +2558,7 @@ thead {
 	margin-left: auto;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
+	width: 100%;
 }
 
 @media only screen and (min-width: 48em) {
@@ -2680,10 +2682,6 @@ thead {
 	width: 168px;
 	height: 8px;
 	display: block;
-}
-
-.wp-block-button:not(:last-child) {
-	margin-right: 1rem;
 }
 
 .wp-block-button:not(.is-style-with-icon) .wp-block-button__link {
@@ -3036,17 +3034,23 @@ thead {
 	color: #ffffff;
 }
 
+.accordion-block .accordion-btn .container {
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.accordion-block .accordion-btn .container {
+		width: 100%;
+	}
+}
+
 .accordion-block .accordion-btn h3 {
 	font-size: 1.25rem;
 	margin: 0;
 }
 
 .accordion-block .accordion-btn span {
-	line-height: 1.8;
-}
-
-.accordion-block .accordion-btn span:before {
-	content: '\002B';
 	color: #ffffff;
 	background-color: #244985;
 	border-radius: 100%;
@@ -3056,11 +3060,19 @@ thead {
 	margin-right: calc(0.5 * 1rem);
 	float: left;
 	text-align: center;
+	line-height: 1.8;
 }
 
-.accordion-block .active span:before {
-	content: "\2212";
+.accordion-block .accordion-btn span::before {
+	content: '\002B';
+}
+
+.accordion-block .active span {
 	background-color: #E45510;
+}
+
+.accordion-block .active span::before {
+	content: '\2212';
 }
 
 .accordion-block .panel {
@@ -3346,6 +3358,7 @@ a:hover, a:active {
 	margin-left: auto;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
+	width: 100%;
 }
 
 @media only screen and (min-width: 48em) {
