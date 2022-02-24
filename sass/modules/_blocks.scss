@@ -21,6 +21,20 @@
 
 	margin-bottom: $space-xl;
 
+	@include breakpoint(tablet) {
+
+		&.apilar-en-tablet {
+			flex-wrap: wrap;
+
+			> .wp-block-column {
+				flex-basis: 100% !important;
+				flex-grow: 1 !important;
+				margin-left: 0 !important;
+			}
+		}
+
+	}
+
 	&.has-background {
 		padding: 0;	
 		margin-bottom: 0;
@@ -292,6 +306,7 @@
 .title-section-absolute {
 	position: absolute;
 	left: 0;
+	max-width: 180px;
 	@include breakpoint(mobile) {
 		position: inherit;
 		margin-bottom: $space-md;

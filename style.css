@@ -2589,6 +2589,17 @@ thead {
 	margin-bottom: calc(4 * 1rem);
 }
 
+@media (max-width: 1024px) {
+	.wp-block-columns.apilar-en-tablet {
+		flex-wrap: wrap;
+	}
+	.wp-block-columns.apilar-en-tablet > .wp-block-column {
+		flex-basis: 100% !important;
+		flex-grow: 1 !important;
+		margin-left: 0 !important;
+	}
+}
+
 .wp-block-columns.has-background {
 	padding: 0;
 	margin-bottom: 0;
@@ -2978,6 +2989,7 @@ thead {
 .title-section-absolute {
 	position: absolute;
 	left: 0;
+	max-width: 180px;
 }
 
 @media (max-width: 768px) {
