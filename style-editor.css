@@ -605,7 +605,8 @@
 	display: inline-flex;
 	content: '';
 	background-image: url("assets/icons/arrow-rigth.svg");
-	background-size: 18px 18px;
+	background-size: contain;
+	background-repeat: no-repeat;
 	height: 18px;
 	width: 18px;
 	margin-right: .5em;

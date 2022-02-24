@@ -2909,7 +2909,8 @@ thead {
 	display: inline-flex;
 	content: '';
 	background-image: url("assets/icons/arrow-rigth.svg");
-	background-size: 18px 18px;
+	background-size: contain;
+	background-repeat: no-repeat;
 	height: 18px;
 	width: 18px;
 	margin-right: .5em;
@@ -4197,7 +4198,25 @@ ul.wp-block-post-template.columns-5 li:nth-child(even) {
 
 @media (max-width: 1024px) {
 	ul.wp-block-post-template.columns-5 li:nth-child(even) {
-		margin-top: auto;
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	ul.wp-block-post-template.columns-5 li {
+		width: calc(33% - 1em) !important;
+	}
+}
+
+@media (max-width: 768px) {
+	ul.wp-block-post-template.columns-5 li {
+		width: calc(50% - 1em) !important;
+	}
+}
+
+@media (max-width: 414px) {
+	ul.wp-block-post-template.columns-5 li {
+		width: 100% !important;
 	}
 }
 

@@ -102,10 +102,24 @@ ul.wp-block-post-template.columns-5 {
 		&:nth-child(even) {
 			margin-top: $space-xxl;
 			@include breakpoint(tablet) {
-				margin-top: auto;
+				margin-top: 0;
 			}
 		}
+
+		@include breakpoint(tablet) {
+			width: calc(33% - 1em) !important;
+		}
+
+		@include breakpoint(mobile) {
+			width: calc(50% - 1em) !important;
+		}
+
+		@include breakpoint(xsmobile) {
+			width: 100% !important;
+		}
 	}
+
+
 }
 
 #cta-form .wpcf7-spinner {
