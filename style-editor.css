@@ -336,7 +336,7 @@
 }
 
 .has-primary-background-color a:hover {
-	color: #244985;
+	color: #E45510;
 }
 
 .has-secondary-background-color {
@@ -770,6 +770,20 @@
 	border: 1rem solid #ffffff;
 }
 
+.big-number {
+	font-size: 3.6em;
+	font-weight: 800;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1;
+}
+
+@media (max-width: 1200px) {
+	.big-number {
+		font-size: 3em;
+	}
+}
+
 ul, ol {
 	margin: 0;
 }
@@ -951,6 +965,14 @@ ul.is-style-check-list li:before {
 	font-size: 1.75rem;
 	margin-bottom: calc(1.5 * 1rem);
 	font-weight: 100;
+}
+
+.card--blog a {
+	color: #132645;
+}
+
+.card--blog a:hover {
+	color: #E45510;
 }
 
 .card--blog a::before {

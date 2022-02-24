@@ -115,14 +115,23 @@
         margin-bottom: $space-xs;
         font-weight: 100;
     }
-    a::before {
-        content: '';
-        position: absolute;
-        top: 40px;
-        bottom: 0;
-        width: 100%;
-        height: 90%
-    
+
+    a {
+        color: $color__primary-80;
+
+		&:hover{
+			color: $color__secondary;
+		}
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            bottom: 0;
+            width: 100%;
+            height: 90%
+        
+        }
     }
 }
 

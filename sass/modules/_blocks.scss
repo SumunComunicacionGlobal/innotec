@@ -397,9 +397,14 @@
 .wp-block-media-text.has-media-on-the-right {
 	border: $space__unit solid $color__white;
 }
-  
-  
 
-
-
-
+.big-number {
+    font-size: 3.6em;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    @include breakpoint(laptop) {
+		font-size: 3em;
+    }
+}

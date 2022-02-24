@@ -1510,20 +1510,6 @@ big {
 	font-size: 1.125rem;
 }
 
-.big-number {
-	font-size: 4rem;
-	font-weight: 800;
-	margin-top: 0;
-	margin-bottom: 0;
-	line-height: 1;
-}
-
-@media (max-width: 1200px) {
-	.big-number {
-		font-size: 3.2em;
-	}
-}
-
 strong {
 	font-family: "IBM Plex Sans", sans-serif;
 }
@@ -2177,6 +2163,14 @@ thead {
 	font-weight: 100;
 }
 
+.card--blog a {
+	color: #132645;
+}
+
+.card--blog a:hover {
+	color: #E45510;
+}
+
 .card--blog a::before {
 	content: '';
 	position: absolute;
@@ -2646,7 +2640,7 @@ thead {
 }
 
 .has-primary-background-color a:hover {
-	color: #244985;
+	color: #E45510;
 }
 
 .has-secondary-background-color {
@@ -3080,16 +3074,30 @@ thead {
 	border: 1rem solid #ffffff;
 }
 
+.big-number {
+	font-size: 3.6em;
+	font-weight: 800;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1;
+}
+
+@media (max-width: 1200px) {
+	.big-number {
+		font-size: 3em;
+	}
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 a {
-	color: #244985;
+	color: #E45510;
 	text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
-	color: #E45510;
+	color: #317CBF;
 }
 
 a:focus {
@@ -3718,7 +3726,7 @@ body.menu-open {
 }
 
 .pagination .nav-links a, .pagination .nav-links span {
-	background-color: #244985;
+	background-color: #E45510;
 	color: #ffffff;
 	padding: calc(0.5 * 1rem);
 	border-radius: 100%;
@@ -3749,7 +3757,7 @@ body.menu-open {
 }
 
 .pagination .page-link:hover {
-	background-color: #244985;
+	background-color: #E45510;
 	border-radius: 24px;
 	color: #ffffff;
 }
