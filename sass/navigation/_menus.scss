@@ -7,7 +7,6 @@
 	grid-template-columns: 120px 200px 1fr;
 	align-items: center;
 	@include breakpoint(tablet) {
-		top: 32px;
 		grid-template-columns: 80px 1fr 80px;
 		gap: 1em;
 	}
@@ -72,9 +71,6 @@
 	
 	.row {
 		height: 3rem;
-		@include breakpoint(tablet) {
-			height: 2rem;
-		}
 	}
 
 	.menu-top-bar-container {
