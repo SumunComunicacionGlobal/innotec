@@ -2924,6 +2924,7 @@ thead {
 	background-repeat: no-repeat;
 	height: 18px;
 	width: 18px;
+	min-width: 18px;
 	margin-right: .5em;
 }
 
@@ -3069,6 +3070,7 @@ thead {
 	border-radius: 100%;
 	font-size: 1.25rem;
 	width: calc(2.5 * 1rem);
+	min-width: calc(2.5 * 1rem);
 	height: calc(2.5 * 1rem);
 	margin-right: calc(0.5 * 1rem);
 	float: left;

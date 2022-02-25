@@ -18,7 +18,7 @@ if( !empty($block['anchor']) ) {
 
 
 <?php if( have_rows('accordion') ): ?>
-    <div id="<?php echo esc_attr($id); ?>" class="accordion-block mt-6 mb-6">
+    <div id="<?php echo esc_attr($id); ?>" class="accordion-block alignfull mt-6 mb-6">
         <?php while( have_rows('accordion') ): the_row(); 
             $image = get_sub_field('accordion_image');
             ?>
