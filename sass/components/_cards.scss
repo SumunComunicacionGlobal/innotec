@@ -13,11 +13,15 @@
         display: block;
     }
 
-    .card-img {
+    &.card-has-img {
 
         @include breakpoint(tablet) {
             height: 215px;
         }
+
+    }
+
+    .card-img {
 
         img {
             position: absolute;

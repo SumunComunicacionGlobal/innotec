@@ -911,7 +911,7 @@ ul.is-style-check-list li:before {
 }
 
 @media (max-width: 1024px) {
-	.card .card-img {
+	.card.card-has-img {
 		height: 215px;
 	}
 }
@@ -1085,7 +1085,7 @@ ul.is-style-check-list li:before {
 }
 
 @media (max-width: 1024px) {
-	.card--cases .card-img {
+	.card--cases.card-has-img {
 		height: 215px;
 	}
 }
@@ -1229,7 +1229,7 @@ ul.is-style-check-list li:before {
 }
 
 @media (max-width: 1024px) {
-	.card--guides .card-img {
+	.card--guides.card-has-img {
 		height: 215px;
 	}
 }

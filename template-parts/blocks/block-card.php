@@ -30,6 +30,8 @@ $text = get_field('card_text');
 $image = get_field('card_image');
 $button = get_field('card_link');
 
+$className .= ( $image ) ? ' card-has-image' : '';
+
 if( $button ): 
     $link_url = $button['url'];
     $link_title = $button['title'];
