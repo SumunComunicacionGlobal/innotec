@@ -6,7 +6,7 @@ if ( !$guia_id ) return false;
 if ( get_post_status( $guia_id ) != 'publish' ) return false;
 ?>
 
-<div class="wp-block-group alignfull has-white-color has-secondary-background-color has-text-color has-background">
+<div class="wp-block-group link-guia alignfull has-white-color has-secondary-background-color has-text-color has-background">
 
 	<div class="wp-block-group__inner-container">
 
@@ -22,7 +22,7 @@ if ( get_post_status( $guia_id ) != 'publish' ) return false;
 
 			<div class="wp-block-column is-vertically-aligned-center">
 
-				<div class="wp-block-buttons dflex is-content-justification-right">
+				<div class="wp-block-buttons">
 
 					<div class="wp-block-button is-style-outline"><a href="<?php echo get_post_type_archive_link( 'guias' ); ?>" class="wp-block-button__link" title="<?php _e( 'Ver todas las guías', 'innotec' ); ?>"><?php _e( 'Ver todas las guías', 'innotec' ); ?></a></div>
 

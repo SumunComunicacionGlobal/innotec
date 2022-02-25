@@ -3113,6 +3113,19 @@ thead {
 	}
 }
 
+.link-guia .wp-block-buttons {
+	display: flex;
+	gap: .5em;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+@media (max-width: 1024px) {
+	.link-guia .wp-block-buttons {
+		justify-content: flex-start;
+	}
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/

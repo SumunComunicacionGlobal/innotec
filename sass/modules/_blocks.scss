@@ -428,3 +428,19 @@
 		font-size: 3em;
     }
 }
+
+// CTA guías
+.link-guia {
+	
+	.wp-block-buttons {
+		display: flex;
+		gap: .5em;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+
+		@include breakpoint(tablet) {
+			justify-content: flex-start;
+		}
+	}
+
+}
