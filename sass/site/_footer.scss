@@ -22,15 +22,22 @@
 .site-info {
     padding-bottom: 6rem;
 
+    .wp-block-gallery,
+    .blocks-gallery-grid {
+        flex-wrap: nowrap;
+    }
+
     .legal {
         display: flex;
         align-items: center;
-        
+        justify-content: flex-end;
+
         ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap;
     
             li:before {
                 content: '|';
@@ -51,6 +58,34 @@
                 
             }
         } 
+
+        @include breakpoint(tablet) {
+            justify-content: center;
+
+            ul li:first-child {
+                margin-left: 0;
+            }
+        }
+        
+        @include breakpoint(mobile) {
+            flex-direction: column;
+
+            ul {
+                margin-top: $space-sm;
+                flex-direction: column;
+
+                li {
+                    text-align: center;
+                    margin-bottom: $space-xxs;
+
+                    &:before {
+                        content: "";
+                    }
+
+                }
+            }
+        }
+
     } 
 
 }

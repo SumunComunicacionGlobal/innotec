@@ -26,7 +26,7 @@
 					<div class="col-xs-12 col-md-4">
 						<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-logos')) : endif; ?>
 					</div>
-					<div class="col-xs-12 col-md-8 legal end-xs">
+					<div class="col-xs-12 col-md-8 legal">
 						<?php
 							printf( esc_html__( 'INNOTECGROUP S.L. 2022', 'innotec') );
 							

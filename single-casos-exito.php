@@ -45,8 +45,8 @@ get_header();
 
         <?php the_post_navigation(
             array(
-                'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Anterior', 'innotec' ) . '</span> <p class="nav-title text-h4">%title</p>',
-                'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Próximo', 'innotec' ) . '</span> <p class="nav-title text-h4">%title</p>',
+                'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Anterior', 'innotec' ) . '</span> <p class="nav-title">%title</p>',
+                'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Próximo', 'innotec' ) . '</span> <p class="nav-title">%title</p>',
             )
         );?>
 

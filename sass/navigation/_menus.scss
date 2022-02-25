@@ -68,6 +68,11 @@
 #top-bar {
 	background-color: $color__primary;
 	color: $color__white;
+
+	@include breakpoint(xsmobile) {
+		@include font-size(0.875);
+
+	}
 	
 	.row {
 		height: 3rem;

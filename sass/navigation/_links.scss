@@ -15,3 +15,31 @@ a {
 		outline: 0;
 	}
 }
+
+.nav-subtitle {
+	display: none;
+}
+
+.nav-links {
+
+	a:before {
+		content: "";
+		display: block;
+		width: 18px;
+		height: 18px;
+		background-image: url('assets/icons/arrow-rigth.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.nav-previous a:before {
+		transform: rotate(180deg);
+	}
+
+	.nav-next a:before {
+		margin-left: auto;
+	}
+}
+.nav-title {
+	font-weight: bold;
+}

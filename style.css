@@ -3216,6 +3216,32 @@ a:hover, a:active {
 	outline: 0;
 }
 
+.nav-subtitle {
+	display: none;
+}
+
+.nav-links a:before {
+	content: "";
+	display: block;
+	width: 18px;
+	height: 18px;
+	background-image: url("assets/icons/arrow-rigth.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.nav-links .nav-previous a:before {
+	transform: rotate(180deg);
+}
+
+.nav-links .nav-next a:before {
+	margin-left: auto;
+}
+
+.nav-title {
+	font-weight: bold;
+}
+
 #masthead {
 	position: absolute;
 	top: 48px;
@@ -3289,6 +3315,13 @@ a:hover, a:active {
 #top-bar {
 	background-color: #244985;
 	color: #ffffff;
+}
+
+@media (max-width: 414px) {
+	#top-bar {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
 }
 
 #top-bar .row {
@@ -4077,9 +4110,15 @@ body.menu-open {
 	padding-bottom: 6rem;
 }
 
+.site-info .wp-block-gallery,
+.site-info .blocks-gallery-grid {
+	flex-wrap: nowrap;
+}
+
 .site-info .legal {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 }
 
 .site-info .legal ul {
@@ -4087,6 +4126,7 @@ body.menu-open {
 	padding: 0;
 	margin: 0;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .site-info .legal ul li:before {
@@ -4105,6 +4145,32 @@ body.menu-open {
 
 .site-info .legal ul a:hover {
 	color: #E45510;
+}
+
+@media (max-width: 1024px) {
+	.site-info .legal {
+		justify-content: center;
+	}
+	.site-info .legal ul li:first-child {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.site-info .legal {
+		flex-direction: column;
+	}
+	.site-info .legal ul {
+		margin-top: calc(2 * 1rem);
+		flex-direction: column;
+	}
+	.site-info .legal ul li {
+		text-align: center;
+		margin-bottom: calc(0.5 * 1rem);
+	}
+	.site-info .legal ul li:before {
+		content: "";
+	}
 }
 
 #hero {
