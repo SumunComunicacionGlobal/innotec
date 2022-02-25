@@ -14,3 +14,12 @@
 	clear: both;
 	@include center-block;
 }
+
+@include breakpoint(mobile) {
+
+	.center-mobile {
+		text-align: center;
+		justify-content: center;
+	}
+
+}

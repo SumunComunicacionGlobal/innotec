@@ -38,6 +38,12 @@ span.error {
 
 input[type="submit"] {
 	font-size: 100%;
+	display: block;
+
+	@include breakpoint(mobile) {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 // Search form
