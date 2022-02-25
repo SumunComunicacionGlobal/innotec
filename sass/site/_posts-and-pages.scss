@@ -27,6 +27,7 @@
 
 	&:nth-child(odd) {
 		
+		.card--cases,
 		.card-content {
 			background-color: $color__primary-40;
 		}

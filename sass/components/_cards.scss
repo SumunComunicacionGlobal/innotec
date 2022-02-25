@@ -10,9 +10,15 @@
     @include breakpoint(tablet) {
         flex-direction: column;
         min-height: 100%;
+        display: block;
     }
 
     .card-img {
+
+        @include breakpoint(tablet) {
+            height: 215px;
+        }
+
         img {
             position: absolute;
             top: 0;
@@ -46,7 +52,7 @@
         @include breakpoint(tablet) {
             width: 100%;
             position: relative;
-            height: 100%;
+            height: 100% !important;
             display: flex;
             flex-direction: column;
         }
@@ -98,10 +104,29 @@
     @include card;
     justify-content: end;
     min-height: 366px;
-    
-    .card-content {
-        height: 240px;
+
+    @include breakpoint(tablet) {
         background-color: $color__primary-80;
+        display: block;
+    }
+        
+    @include breakpoint(xsmobile) {
+        background-color: transparent;
+        margin-bottom: $space__unit;
+    }
+        
+    .card-content {
+        // height: 240px;
+        min-height: 240px;
+        background-color: $color__primary-80;
+    }
+
+    p.card-excerpt {
+        margin-bottom: 2.5rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -139,6 +164,7 @@
     @include card;
     justify-content: start;
     min-height: 550px;
+    background-color: $color__primary-80;
 
     .card-content {
         background-color: $color__primary-80;
