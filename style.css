@@ -3312,7 +3312,7 @@ a:hover, a:active {
 }
 
 .site-btn--contact a:after {
-	content: url("assets/icons/bubble-chat.png");
+	content: url("assets/icons/mail.svg");
 }
 
 #top-bar {

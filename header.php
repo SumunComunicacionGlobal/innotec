@@ -54,7 +54,13 @@
 		</div><!-- .site-branding -->
 
 		<div class="site-branding">
-			<?php the_custom_logo();?>
+			<?php if ( has_custom_logo() ) {
+				the_custom_logo();
+			} else {
+				echo '<a href="'.get_home_url().'" class="custom-logo-link" rel="home" aria-current="page">';
+					echo '<img width="166" height="31" src="'.get_stylesheet_directory_uri().'/assets/logo-innotec.svg" alt="'.get_bloginfo( 'name' ).' '.get_bloginfo( 'description' ).'">';
+				echo '</a>';
+			} ?>
 		</div><!-- .site-branding -->
 		
 		<div class="site-btn--contact"><a href="/contacto/"><span class="screen-reader-text"><?php esc_html_e( 'Contacto', 'innotec' ); ?></span></a></div>
