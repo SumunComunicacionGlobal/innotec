@@ -11,7 +11,7 @@
 		margin-left: 2rem;
 	}
 
-	.alignfull > .wp-block-group__inner-container {	
+	.alignfull:not(.no-container) > .wp-block-group__inner-container {	
 		@include container;
 	}
 	
@@ -423,6 +423,32 @@
   
 .wp-block-media-text.has-media-on-the-right {
 	border: $space__unit solid $color__white;
+}
+
+.ultimo-caso-exito {
+	border: $space__unit solid $color__white;
+
+	.card--cases {
+		min-height: 440px;
+
+		.card-content {
+			background-color: $color__ligth;
+			width: 50%;
+
+			@include breakpoint(tablet) {
+				width: 100%;
+			}
+
+			a {
+				color: $color__secondary;
+			}
+
+			p {
+				color: inherit;
+			}
+
+		}
+	}
 }
 
 .big-number {

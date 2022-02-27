@@ -2617,7 +2617,7 @@ thead {
 	margin-left: 2rem;
 }
 
-.entry-content .alignfull > .wp-block-group__inner-container {
+.entry-content .alignfull:not(.no-container) > .wp-block-group__inner-container {
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 1.5rem;
@@ -2626,25 +2626,25 @@ thead {
 }
 
 @media only screen and (min-width: 48em) {
-	.entry-content .alignfull > .wp-block-group__inner-container {
+	.entry-content .alignfull:not(.no-container) > .wp-block-group__inner-container {
 		width: 46rem;
 	}
 }
 
 @media only screen and (min-width: 64em) {
-	.entry-content .alignfull > .wp-block-group__inner-container {
+	.entry-content .alignfull:not(.no-container) > .wp-block-group__inner-container {
 		width: 62rem;
 	}
 }
 
 @media only screen and (min-width: 80em) {
-	.entry-content .alignfull > .wp-block-group__inner-container {
+	.entry-content .alignfull:not(.no-container) > .wp-block-group__inner-container {
 		width: 72.250rem;
 	}
 }
 
 @media only screen and (min-width: 91em) {
-	.entry-content .alignfull > .wp-block-group__inner-container {
+	.entry-content .alignfull:not(.no-container) > .wp-block-group__inner-container {
 		width: 88rem;
 	}
 }
@@ -3170,6 +3170,33 @@ thead {
 
 .wp-block-media-text.has-media-on-the-right {
 	border: 1rem solid #ffffff;
+}
+
+.ultimo-caso-exito {
+	border: 1rem solid #ffffff;
+}
+
+.ultimo-caso-exito .card--cases {
+	min-height: 440px;
+}
+
+.ultimo-caso-exito .card--cases .card-content {
+	background-color: #F4F5F7;
+	width: 50%;
+}
+
+@media (max-width: 1024px) {
+	.ultimo-caso-exito .card--cases .card-content {
+		width: 100%;
+	}
+}
+
+.ultimo-caso-exito .card--cases .card-content a {
+	color: #E45510;
+}
+
+.ultimo-caso-exito .card--cases .card-content p {
+	color: inherit;
 }
 
 .big-number {

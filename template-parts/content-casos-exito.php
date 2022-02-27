@@ -28,7 +28,7 @@
                             <h2><?php the_field ('title_casos');?></h2>
                         </div>
                         <div class="col-xs-12 col-md-6 col-md-offset-1">
-                            <p class="card-excerpt"><?php echo get_the_excerpt();?></p>
+                            <p class="card-excerpt"><?php echo apply_filters( 'the_content', $post->post_excerpt ); ?></p>
                         </div>
                     </div>     
                 </div>

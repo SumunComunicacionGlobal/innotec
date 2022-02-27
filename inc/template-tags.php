@@ -169,3 +169,36 @@ function innotec_after_content_link_guias( $content ) {
 
 	return $content . ob_get_clean();
 }
+
+function ultimo_caso_exito_shortcode() {
+
+	$args = array(
+		'post_type'			=> 'casos-exito',
+		'posts_per_page'		=> 1,
+	);
+
+	$casos_exito = get_posts( $args );
+	if ( $casos_exito ) {
+
+		global $post;
+
+		$post = $casos_exito[0];
+		setup_postdata( $post );
+		// $q = new WP_Query($args);
+
+		ob_start();
+
+		echo '<div class="ultimo-caso-exito">';
+			get_template_part( 'template-parts/card', 'casos-exito' );
+		echo '</div>';
+
+		$r .= ob_get_clean();
+
+		wp_reset_postdata();
+
+	}
+
+	return $r;
+
+}
+add_shortcode( 'ultimo_caso_exito', 'ultimo_caso_exito_shortcode' );

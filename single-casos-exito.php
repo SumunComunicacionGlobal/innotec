@@ -29,6 +29,7 @@ get_header();
         if( $posts ): ?>
             <section id="related-casos">
                 <div class="container-fluid mb-4">
+                    <h2 class="related-casos--title has-text-align-center"><?php esc_html_e( 'Proyectos relacionados', 'innotec' ); ?></h2>
                     <div class="row">
                         <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                             <?php setup_postdata($post);
