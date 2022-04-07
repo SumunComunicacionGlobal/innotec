@@ -345,7 +345,7 @@ template {
 /* set base value. You can change this value */
 /* space scale */
 /* helpers margin top & bottom */
-.mt-0 {
+.mt-05 {
 	margin-top: calc(0.5 * 1rem);
 }
 
@@ -377,7 +377,7 @@ template {
 	margin-top: calc(8 * 1rem);
 }
 
-.mb-0 {
+.mb-05 {
 	margin-bottom: calc(0.5 * 1rem);
 }
 
@@ -417,7 +417,7 @@ template {
 	margin-right: calc(1.5 * 1rem);
 }
 
-.pt-0 {
+.pt-05 {
 	padding-top: calc(0.5 * 1rem);
 }
 
@@ -449,7 +449,7 @@ template {
 	padding-top: calc(8 * 1rem);
 }
 
-.pb-0 {
+.pb-05 {
 	padding-bottom: calc(0.5 * 1rem);
 }
 
@@ -481,7 +481,7 @@ template {
 	padding-bottom: calc(8 * 1rem);
 }
 
-.pl-0 {
+.pl-05 {
 	padding-left: calc(0.5 * 1rem);
 }
 
@@ -514,6 +514,10 @@ template {
 }
 
 .pa-0 {
+	padding: 0;
+}
+
+.pa-05 {
 	padding: calc(0.5 * 1rem);
 }
 
