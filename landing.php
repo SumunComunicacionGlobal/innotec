@@ -41,7 +41,6 @@
 			} ?>
 		</div><!-- .site-branding -->
 		
-		<div class="site-btn--contact"><a href="/contacto/"><span class="screen-reader-text"><?php esc_html_e( 'Contacto', 'innotec' ); ?></span></a></div>
 	</header><!-- #masthead -->
 
 
